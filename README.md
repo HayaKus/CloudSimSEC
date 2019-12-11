@@ -5,10 +5,10 @@
 [![](https://img.shields.io/badge/platform-windows-orange)](https://www.microsoft.com/windows/)
 [![](https://img.shields.io/badge/license-MIT-orange)](/LICENSE)
 
-The document is explained in both English and Chinese, and the bold part is a Chinese translation.
+The document is explained in both English and Chinese, and the bold part is a Chinese translation.  
 **该文件同时使用英文和中文进行说明，其中加粗部分为中文翻译。**
 
-If you found it helpful to you, please give me a star and recommend it to your friends around you.(●'◡'●)
+If you found it helpful to you, please give me a star and recommend it to your friends around you.(●'◡'●)  
 **如果您觉得软件对您有所帮助，点一下右上角的star并推荐给周围的朋友就是对我极大的支持。(●'◡'●)**
 
 ## Table of Contents 内容列表
@@ -31,19 +31,19 @@ If you found it helpful to you, please give me a star and recommend it to your f
 
 ## Background 背景
 
-There are more and more traffic demands of cloud data centers in recent years, leading to the continuous establishment and expansion of cloud data centers around the world. Although their economic utility is increasing, huge energy consumption has also received more and more attention. The problem of energy consumption in cloud data centers has changed from past distribution to present centralization, because cloud computing can achieve the flexibility and scalability of computing resources (such as networks, storage, applications, and services). In order to optimize the energy consumption of the cloud data center, it is necessary to establish an energy consumption simulator for the cloud data center.
+There are more and more traffic demands of cloud data centers in recent years, leading to the continuous establishment and expansion of cloud data centers around the world. Although their economic utility is increasing, huge energy consumption has also received more and more attention. The problem of energy consumption in cloud data centers has changed from past distribution to present centralization, because cloud computing can achieve the flexibility and scalability of computing resources (such as networks, storage, applications, and services). In order to optimize the energy consumption of the cloud data center, it is necessary to establish an energy consumption simulator for the cloud data center.  
 **近年来，云数据中心面临着越来越多的流量需求，导致世界各地的云数据中心不断地组建和扩张。虽然其经济效用日益增加，但巨大的能耗也受到了越来越多的关注。由于云计算可以实现计算资源（例如网络，存储，应用和服务）的灵活性和可扩展性，因此云数据中心能耗问题从过去的分散方式变为现在以集中方式凸显。为了对云数据中心的能耗使用情况进行优化，针对云数据中心建立一个能耗模拟器是十分必要的。**
 
-Original CloudSim goal is to provide a generalized and extensible simulation framework that enables modeling, simulation, and experimentation of emerging Cloud computing infrastructures and application services, allowing its users to focus on specific system design issues that they want to investigate, without getting concerned about the low level details related to Cloud-based infrastructures and services.
+Original CloudSim goal is to provide a generalized and extensible simulation framework that enables modeling, simulation, and experimentation of emerging Cloud computing infrastructures and application services, allowing its users to focus on specific system design issues that they want to investigate, without getting concerned about the low level details related to Cloud-based infrastructures and services.  
 **原版CloudSim的目标是提供一个通用且可扩展的仿真框架，该框架能够对新兴的云计算基础架构和应用程序服务进行建模、仿真和实验，从而使其用户能够专注于他们想调查的特定系统设计问题，而不必担心基于云的基础架构和服务相关的底层问题。**
 
-Original CloudSim is developed in [the Cloud Computing and Distributed Systems (CLOUDS) Laboratory](http://cloudbus.org/), at [the Computer Science and Software Engineering Department](http://www.csse.unimelb.edu.au/) of [the University of Melbourne](http://www.unimelb.edu.au/).
+Original CloudSim is developed in [the Cloud Computing and Distributed Systems (CLOUDS) Laboratory](http://cloudbus.org/), at [the Computer Science and Software Engineering Department](http://www.csse.unimelb.edu.au/) of [the University of Melbourne](http://www.unimelb.edu.au/).  
 **原版CloudSim由[墨尔本大学](http://www.unimelb.edu.au/)的[计算机科学与软件工程系](http://www.csse.unimelb.edu.au/)的[开发云计算与分布式系统（云）实验室](http://cloudbus.org/)开发。**
 
-More information can be found on the [CloudSim's web site](http://cloudbus.org/cloudsim/).
+More information can be found on the [CloudSim's web site](http://cloudbus.org/cloudsim/).  
 **您可以在[CloudSim的官方网站](http://cloudbus.org/cloudsim/)上查找到更多信息。**
 
-CloudSimSEC is an extension of Cloudsim specifically designed to simulate the energy consumption of cloud data centers. There are main features of CloudSimSEC, i.e.,
+CloudSimSEC is an extension of Cloudsim specifically designed to simulate the energy consumption of cloud data centers. There are main features of CloudSimSEC, i.e.,  
 **CloudSimSEC是一款专门用于模拟云数据中心能耗Cloudsim的延伸作品。CloudSimSEC的主要特点为：**
 
 - support for simulating energy consumption of cloud data centers via RBF neural network
@@ -59,10 +59,10 @@ CloudSimSEC is an extension of Cloudsim specifically designed to simulate the en
 
 ## Install 安装
 
-The source file does not need to be installed, it can be opened directly with an editor that supports java, such as [IDEA](http://www.jetbrains.com/idea/).
+The source file does not need to be installed, it can be opened directly with an editor that supports java, such as [IDEA](http://www.jetbrains.com/idea/).  
 **源文件不需要被安装，可以使用支持Java的编辑器直接打开它，例如 [IDEA](http://www.jetbrains.com/idea/)。**
 
-In addition, there are some environments that must be installed locally, i.e.,
+In addition, there are some environments that must be installed locally, i.e.,  
 **此外，还有以下环境必须被安装：**
 
 - jdk1.8.0_201 (The file 'jdk1.8.0_201' has been placed in the source file.)
@@ -70,7 +70,7 @@ In addition, there are some environments that must be installed locally, i.e.,
 
 ## Usage 使用说明
 
-Run '/PowerForecast/main/Main.java' through a compiler (e.g., [IDEA](http://www.jetbrains.com/idea/)) to open the graphical user interface.
+Run '/PowerForecast/main/Main.java' through a compiler (e.g., [IDEA](http://www.jetbrains.com/idea/)) to open the graphical user interface.  
 **通过编译器（例如 [IDEA](http://www.jetbrains.com/idea/)）运行'/PowerForecast/main/Main.java'即可打开图形化用户界面。**
 
 <center><img src="https://github.com/HayaKus/CloudSimSEC/graphs/usage/CloudSimSEC首页.jpg" width="80%"/></center>
@@ -166,17 +166,17 @@ The parameters that can be set in the cloud data centers are mainly divided into
 
 ## Result 结果说明
 
-The homepage will show the comparison of the energy consumption of the cloud data center without the scheduling algorithm and with RR algorithm, DVFS algorithm, SR algorithm. And some system information of simulation will be shown.
+The homepage will show the comparison of the energy consumption of the cloud data center without the scheduling algorithm and with RR algorithm, DVFS algorithm, SR algorithm. And some system information of simulation will be shown.  
 **主页中会显示云数据中心在没有调度算法、只有RR算法、只有DVFS算法和只有SR算法的情况下的能耗对比情况和一些模拟出的系统信息。**
 
 <center><img src="/graphs/result/CloudSimSEC总能耗对比.jpg" width="80%"/></center>
 
-In addition, the average power and average utilization of all physical hosts in the above four cases will be shown.
+In addition, the average power and average utilization of all physical hosts in the above four cases will be shown.  
 **并且，以上四种情况下所有物理主机的平均功率和平均利用率都会被显示。**
 
 <center><img src="/graphs/result/CloudSimSEC混合对比.jpg" width="80%"/></center>
 
-Moreover, the average power and average utilization of every physical host in the above four cases will be shown.
+Moreover, the average power and average utilization of every physical host in the above four cases will be shown.  
 **此外，以上四种情况下每一台物理主机的平均功率和平均利用率都会被显示。**
 
 <center><img src="/graphs/result/CloudSimSEC每台主机混合对比.jpg" width="80%"/></center>
@@ -184,7 +184,7 @@ Moreover, the average power and average utilization of every physical host in th
 
 ## Related Efforts 相关仓库
 
-A web version of CloudSimSEC will be launched soon.
+A web version of CloudSimSEC will be launched soon.  
 **近期会推出网页版的CloudSimSEC，敬请期待。**
 
 ## Maintainers 维护者
@@ -195,12 +195,12 @@ A web version of CloudSimSEC will be launched soon.
 
 ## Contributing 如何贡献
 
-Feel free to dive in! [Open an issue](https://github.com/HayaKus/CloudSimSEC/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/HayaKus/CloudSimSEC/issues/new) or submit PRs.  
 **非常欢迎你的加入! [提一个Issue](https://github.com/HayaKus/CloudSimSEC/issues/new) 或者提交一个 Pull Request.**
 
 ### Contributors 贡献者
 
-Thanks goes to these wonderful people:
+Thanks goes to these wonderful people:  
 **感谢以下参与项目的人：**
 <img src="/graphs/logo/HayaKus.png" width="5%"/> [林皓伟](https://github.com/HayaKus)
 <img src="/graphs/logo/StVak.jpg" width="5.5%"/>[StVak](https://github.com/StVak)
