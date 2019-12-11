@@ -1,6 +1,6 @@
 # CloudSimSEC
 
-![](https://img.shields.io/badge/Powered%20By-CloudSimSEC-green)
+[![](https://img.shields.io/badge/Powered%20By-CloudSimSEC-green)](https://github.com/HayaKus/CloudSimSEC)
 ![](https://img.shields.io/badge/release-v1.0-blue)
 [![](https://img.shields.io/badge/platform-windows-orange)](https://www.microsoft.com/windows/)
 [![](https://img.shields.io/badge/license-MIT-orange)](/LICENSE)
@@ -73,7 +73,7 @@ In addition, there are some environments that must be installed locally, i.e.,
 Run '/PowerForecast/main/Main.java' through a compiler (e.g., [IDEA](http://www.jetbrains.com/idea/)) to open the graphical user interface.
 **通过编译器（例如 [IDEA](http://www.jetbrains.com/idea/)）运行'/PowerForecast/main/Main.java'即可打开图形化用户界面。**
 
-<center><img src="/graphs/usage/CloudSimSEC首页.jpg" width="80%"/></center>
+<center><img src="https://github.com/HayaKus/CloudSimSEC/graphs/usage/CloudSimSEC首页.jpg" width="80%"/></center>
 
 The parameters that can be set in the cloud data centers are mainly divided into five parts, i.e.,
 **云数据中心里可以被设置的参数主要被分为五个部分，即**
@@ -195,13 +195,15 @@ A web version of CloudSimSEC will be launched soon.
 
 ## Contributing 如何贡献
 
-非常欢迎你的加入! [提一个Issue]() 或者提交一个 Pull R equest.
+Feel free to dive in! [Open an issue](https://github.com/HayaKus/CloudSimSEC/issues/new) or submit PRs.
+**非常欢迎你的加入! [提一个Issue](https://github.com/HayaKus/CloudSimSEC/issues/new) 或者提交一个 Pull Request.**
 
 ### Contributors 贡献者
 
 Thanks goes to these wonderful people:
 **感谢以下参与项目的人：**
 <img src="/graphs/logo/HayaKus.png" width="5%"/> [林皓伟](https://github.com/HayaKus)
+<img src="/graphs/logo/StVak.jpg" width="5.5%"/>[StVak](https://github.com/StVak)
 
 ## License 使用许可
 
