@@ -73,9 +73,7 @@ In addition, there are some environments that must be installed locally, i.e.,
 Run '/PowerForecast/main/Main.java' through a compiler (e.g., [IDEA](http://www.jetbrains.com/idea/)) to open the graphical user interface.  
 **通过编译器（例如 [IDEA](http://www.jetbrains.com/idea/)）运行'/PowerForecast/main/Main.java'即可打开图形化用户界面。**
 
-<center><img src="https://github.com/HayaKus/CloudSimSEC/tree/graphs/usage/CloudSimSEC首页.jpg" width="80%"/></center>
-
-<center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/usage/CloudSimSEC%E9%A6%96%E9%A1%B5.jpg" width="80%"/></center>
+<center><img src="https://github.com/HayaKus/CloudSimSEC/tree/master/graphs/usage/CloudSimSEC首页.jpg" width="80%"/></center>
 
 The parameters that can be set in the cloud data centers are mainly divided into five parts, i.e.,  
 **云数据中心里可以被设置的参数主要被分为五个部分，即**
@@ -171,17 +169,17 @@ The parameters that can be set in the cloud data centers are mainly divided into
 The homepage will show the comparison of the energy consumption of the cloud data center without the scheduling algorithm and with RR algorithm, DVFS algorithm, SR algorithm. And some system information of simulation will be shown.  
 **主页中会显示云数据中心在没有调度算法、只有RR算法、只有DVFS算法和只有SR算法的情况下的能耗对比情况和一些模拟出的系统信息。**
 
-<center><img src="/graphs/result/CloudSimSEC总能耗对比.jpg" width="80%"/></center>
+<center><img src="https://github.com/HayaKus/CloudSimSEC/tree/master/graphs/result/CloudSimSEC总能耗对比.jpg" width="80%"/></center>
 
 In addition, the average power and average utilization of all physical hosts in the above four cases will be shown.  
 **并且，以上四种情况下所有物理主机的平均功率和平均利用率都会被显示。**
 
-<center><img src="/graphs/result/CloudSimSEC混合对比.jpg" width="80%"/></center>
+<center><img src="https://github.com/HayaKus/CloudSimSEC/tree/master/graphs/result/CloudSimSEC混合对比.jpg" width="80%"/></center>
 
 Moreover, the average power and average utilization of every physical host in the above four cases will be shown.  
 **此外，以上四种情况下每一台物理主机的平均功率和平均利用率都会被显示。**
 
-<center><img src="/graphs/result/CloudSimSEC每台主机混合对比.jpg" width="80%"/></center>
+<center><img src="https://github.com/HayaKus/CloudSimSEC/tree/master/graphs/result/CloudSimSEC每台主机混合对比.jpg" width="80%"/></center>
 
 
 ## Related Efforts 相关仓库
@@ -191,7 +189,7 @@ A web version of CloudSimSEC will be launched soon.
 
 ## Maintainers 维护者
 
-<img src="/graphs/logo/HayaKus.png" width="5%"/> [林皓伟](https://github.com/HayaKus)  
+<img src="https://github.com/HayaKus/CloudSimSEC/tree/master/graphs/logo/HayaKus.png" width="5%"/> [林皓伟](https://github.com/HayaKus)  
 
 **Website: [twocups.cn](https://twocups.cn)**  
 
@@ -208,9 +206,9 @@ Feel free to dive in! [Open an issue](https://github.com/HayaKus/CloudSimSEC/iss
 Thanks goes to these wonderful people:  
 **感谢以下参与项目的人：**  
 
-<img src="/graphs/logo/HayaKus.png" width="5%"/> [林皓伟](https://github.com/HayaKus)  
+<img src="https://github.com/HayaKus/CloudSimSEC/tree/master/graphs/logo/HayaKus.png" width="5%"/> [林皓伟](https://github.com/HayaKus)  
 
-<img src="/graphs/logo/StVak.jpg" width="5.5%"/>[StVak](https://github.com/StVak)
+<img src="https://github.com/HayaKus/CloudSimSEC/tree/master/graphs/logo/StVak.jpg" width="5.5%"/>[StVak](https://github.com/StVak)
 
 ## License 使用许可
 
