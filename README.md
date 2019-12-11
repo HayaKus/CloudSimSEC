@@ -74,6 +74,7 @@ Run '/PowerForecast/main/Main.java' through a compiler (e.g., [IDEA](http://www.
 **通过编译器（例如 [IDEA](http://www.jetbrains.com/idea/)）运行'/PowerForecast/main/Main.java'即可打开图形化用户界面。**
 
 <center><img src="https://github.com/HayaKus/CloudSimSEC/raw/master//graphs/usage/CloudSimSEC首页.jpg" width="80%"/></center>
+<center>![](https://github.com/HayaKus/CloudSimSEC/raw/master//graphs/usage/CloudSimSEC首页.jpg)</center>
 
 The parameters that can be set in the cloud data centers are mainly divided into five parts, i.e.,  
 **云数据中心里可以被设置的参数主要被分为五个部分，即**
