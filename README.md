@@ -169,17 +169,17 @@ The parameters that can be set in the cloud data centers are mainly divided into
 The homepage will show the comparison of the energy consumption of the cloud data center without the scheduling algorithm and with RR algorithm, DVFS algorithm, SR algorithm. And some system information of simulation will be shown.  
 **主页中会显示云数据中心在没有调度算法、只有RR算法、只有DVFS算法和只有SR算法的情况下的能耗对比情况和一些模拟出的系统信息。**
 
-<center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/result/CloudSimSEC%E6%80%BB%E8%83%BD%E8%80%97%E5%AF%B9%E6%AF%94.jpg" width="80%"/></center>
+<div align=center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/result/CloudSimSEC%E6%80%BB%E8%83%BD%E8%80%97%E5%AF%B9%E6%AF%94.jpg" width="80%"/></div>
 
 In addition, the average power and average utilization of all physical hosts in the above four cases will be shown.  
 **并且，以上四种情况下所有物理主机的平均功率和平均利用率都会被显示。**
 
-<center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/result/CloudSimSEC%E6%B7%B7%E5%90%88%E5%AF%B9%E6%AF%94.jpg" width="80%"/></center>
+<div align=center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/result/CloudSimSEC%E6%B7%B7%E5%90%88%E5%AF%B9%E6%AF%94.jpg" width="80%"/></div>
 
 Moreover, the average power and average utilization of every physical host in the above four cases will be shown.  
 **此外，以上四种情况下每一台物理主机的平均功率和平均利用率都会被显示。**
 
-<center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/result/CloudSimSEC%E6%AF%8F%E5%8F%B0%E4%B8%BB%E6%9C%BA%E6%B7%B7%E5%90%88%E5%AF%B9%E6%AF%94.jpg" width="80%"/></center>
+<div align=center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/result/CloudSimSEC%E6%AF%8F%E5%8F%B0%E4%B8%BB%E6%9C%BA%E6%B7%B7%E5%90%88%E5%AF%B9%E6%AF%94.jpg" width="80%"/></div>
 
 
 ## Related Efforts 相关仓库
