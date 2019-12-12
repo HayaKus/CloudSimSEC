@@ -208,7 +208,7 @@ Thanks goes to these wonderful people:
 
 <img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/logo/HayaKus.png" width="5%"/> [林皓伟](https://github.com/HayaKus)  
 
-<img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/logo/StVak.png" width="5%"/>[StVak](https://github.com/StVak)
+<img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/logo/StVak.png" width="5%"/> [StVak](https://github.com/StVak)
 
 ## License 使用许可
 
