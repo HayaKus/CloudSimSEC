@@ -2,6 +2,7 @@
 
 [![](https://img.shields.io/badge/Powered%20By-CloudSimSEC-green)](https://github.com/HayaKus/CloudSimSEC)
 ![](https://img.shields.io/badge/release-v1.0-blue)
+![](https://img.shields.io/badge/language-Java%20%7C%20HTML-orange)
 [![](https://img.shields.io/badge/platform-windows-orange)](https://www.microsoft.com/windows/)
 [![](https://img.shields.io/badge/license-MIT-orange)](/LICENSE)
 
