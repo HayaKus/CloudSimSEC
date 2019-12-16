@@ -60,35 +60,14 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CloudSimSEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSimSEC" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CloudSimSEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSimSEC" type="462c0819:PsiDirectoryNode" />
-              <item name="PowerForecast" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CloudSimSEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSimSEC" type="462c0819:PsiDirectoryNode" />
-              <item name="PowerForecast" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/科研/MCVAM" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RunDashboard">
@@ -157,17 +136,17 @@
       <workItem from="1576043790412" duration="930000" />
       <workItem from="1576062904454" duration="213000" />
       <workItem from="1576063494101" duration="9000" />
+      <workItem from="1576493701853" duration="77000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5004000" />
+    <option name="totallyTimeSpent" value="5081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22376789" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22535771" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
