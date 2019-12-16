@@ -70,6 +70,8 @@ public class GUI {
         frame.setSize(frameWidth, frameHeight);
         frame.setLocation(200, 200);
 
+        frame = setIcon(frame);
+
         frame.setLayout(new BorderLayout());
         JPanel upperPanel = new JPanel();
         upperPanel.setPreferredSize(new Dimension(frameWidth, upperPanelHeight));
@@ -87,6 +89,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JDialog frame = new JDialog();//构造一个新的JFrame，作为新窗口。
+                frame = setIcon(frame);
                 frame.setTitle("训练模型");
                 frame.setBounds(500, 200, 400, 350);
                 JLabel jl = new JLabel();// 注意类名别写错了。
@@ -140,6 +143,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JDialog frame = new JDialog();//构造一个新的JFrame，作为新窗口。
+                frame = setIcon(frame);
                 frame.setTitle("帮助");
                 frame.setBounds(600, 250, 250, 250);
                 JLabel jl = new JLabel();// 注意类名别写错了。
@@ -570,5 +574,19 @@ public class GUI {
             e.printStackTrace();
         }
 
+    }
+
+    public static JFrame setIcon(JFrame jf){
+        Toolkit t = Toolkit.getDefaultToolkit();
+        Image image = t.getImage("PowerForecast\\gui\\Logo.png");
+        jf.setIconImage(image);
+        return  jf;
+    }
+
+    public static JDialog setIcon(JDialog jd){
+        Toolkit t = Toolkit.getDefaultToolkit();
+        Image image = t.getImage("PowerForecast\\gui\\Logo.png");
+        jd.setIconImage(image);
+        return  jd;
     }
 }

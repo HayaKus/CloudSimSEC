@@ -17,11 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PowerForecast/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
+            <state relative-caret-position="179">
               <caret line="93" column="35" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PowerForecast/gui/GUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1358">
+              <caret line="145" column="39" selection-start-line="145" selection-start-column="39" selection-end-line="145" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -36,6 +45,9 @@
       <find>Thread</find>
       <find>.start(</find>
       <find>大规模</find>
+      <find>framew</find>
+      <find>\</find>
+      <find>frame</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -59,9 +71,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CloudSimSEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudSimSEC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudSimSEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudSimSEC" type="462c0819:PsiDirectoryNode" />
+              <item name="PowerForecast" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudSimSEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudSimSEC" type="462c0819:PsiDirectoryNode" />
+              <item name="PowerForecast" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudSimSEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudSimSEC" type="462c0819:PsiDirectoryNode" />
+              <item name="PowerForecast" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,16 +176,18 @@
       <workItem from="1576062904454" duration="213000" />
       <workItem from="1576063494101" duration="9000" />
       <workItem from="1576493701853" duration="77000" />
+      <workItem from="1576503142507" duration="2420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5081000" />
+    <option name="totallyTimeSpent" value="7501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22535771" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22694753" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -223,13 +264,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PowerForecast/gui/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1169">
-          <caret line="333" column="42" selection-start-line="333" selection-start-column="42" selection-end-line="333" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PowerForecast/gui/ResultBtnThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -239,8 +273,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PowerForecast/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
+        <state relative-caret-position="179">
           <caret line="93" column="35" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PowerForecast/gui/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1358">
+          <caret line="145" column="39" selection-start-line="145" selection-start-column="39" selection-end-line="145" selection-end-column="39" />
         </state>
       </provider>
     </entry>
