@@ -1,5 +1,4 @@
-![](https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/logo/HayaKus.png)
-# CloudSimSEC
+# <img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/logo/HayaKus.png" width="5%"/> CloudSimSEC
 
 [![](https://img.shields.io/badge/Powered%20By-CloudSimSEC-green)](https://github.com/HayaKus/CloudSimSEC)
 ![](https://img.shields.io/badge/release-v1.0-blue)
@@ -61,7 +60,7 @@ CloudSimSEC is an extension of Cloudsim specifically designed to simulate the en
 
 ## Download/Install 下载/安装
 
-Download install pack (539MB): [CloudSimSEC__setup.exe](https:/twocups.cn/download/CloudSimSEC__setup.exe)  
+Download install pack (539MB): [CloudSimSEC__setup.exe](https:/twocups.cn/)  
 **下载安装包（539MB）：[CloudSimSEC__setup.exe](https:/twocups.cn/download/CloudSimSEC__setup.exe)**
 
 In addition, there are some environments that must be installed locally, i.e.,  
