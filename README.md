@@ -1,4 +1,4 @@
-# CloudSimSEC
+# ![](https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/logo/HayaKus.png) CloudSimSEC
 
 [![](https://img.shields.io/badge/Powered%20By-CloudSimSEC-green)](https://github.com/HayaKus/CloudSimSEC)
 ![](https://img.shields.io/badge/release-v1.0-blue)
@@ -15,7 +15,7 @@ If you found it helpful to you, please give me a star and recommend it to your f
 ## Table of Contents 内容列表
 
 - [Background 背景](#background-背景)
-- [Install 安装](#install-安装)
+- [Download/Install 下载/安装](#downloadinstall-下载安装)
 - [Usage 使用说明](#usage-使用说明)
 	- [1. the parameters of data center 数据中心的参数](#1-the-parameters-of-data-center-数据中心的参数)
 	- [2. the parameters of physical hosts 物理主机的参数](#2-the-parameters-of-physical-hosts-物理主机的参数)
@@ -58,21 +58,27 @@ CloudSimSEC is an extension of Cloudsim specifically designed to simulate the en
 - support for changing the independent variable interfaces of various models of energy consumption, which can be used to increase or decrease the input variables of models of energy consumption
 - **支持更改各种能耗模型的自变量接口，可用于增加或减少能耗模型的输入变量**
 
-## Install 安装
+## Download/Install 下载/安装
 
-The source file does not need to be installed, it can be opened directly with an editor that supports java, such as [IDEA](http://www.jetbrains.com/idea/).  
-**源文件不需要被安装，可以使用支持Java的编辑器直接打开它，例如 [IDEA](http://www.jetbrains.com/idea/)。**
+Download install pack (539MB):[CloudSimSEC__setup.exe](https:/twocups.cn/download/CloudSimSEC__setup.exe)  
+**下载安装包（539MB）：[CloudSimSEC__setup.exe](https:/twocups.cn/download/CloudSimSEC__setup.exe)**
 
 In addition, there are some environments that must be installed locally, i.e.,  
 **此外，还有以下环境必须被安装：**
 
 - jdk1.8.0_201 (The file 'jdk1.8.0_201' has been placed in the source file.)
-- MATLAB R2017b (More information can be found on the [MATLAB's web site](https://www.mathworks.com/).)
+- MATLAB R2017b (More information can be found on the [MATLAB's web site](https://www.mathworks.com/).)  
+
+Or you can also run directly the source code: The source file does not need to be installed, it can be opened directly with an editor that supports java, such as [IDEA](http://www.jetbrains.com/idea/).  
+**或者您也可以直接运行源代码：源文件不需要被安装，可以使用支持Java的编辑器直接打开它，例如 [IDEA](http://www.jetbrains.com/idea/)。**
 
 ## Usage 使用说明
 
-Run '/PowerForecast/main/Main.java' through a compiler (e.g., [IDEA](http://www.jetbrains.com/idea/)) to open the graphical user interface.  
-**通过编译器（例如 [IDEA](http://www.jetbrains.com/idea/)）运行'/PowerForecast/main/Main.java'即可打开图形化用户界面。**
+Install pack: After the software is installed, click the 'CloudSimSEC' file on the desktop to open the software.  
+**安装包：安装完成之后，点击桌面的'CloudSimSEC'文件即可打开软件。**
+
+Source code: Run '/PowerForecast/main/Main.java' through a compiler (e.g., [IDEA](http://www.jetbrains.com/idea/)) to open the software.  
+**源代码：通过编译器（例如 [IDEA](http://www.jetbrains.com/idea/)）运行'/PowerForecast/main/Main.java'即可打开软件。**
 
 <div align=center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/usage/CloudSimSEC%E9%A6%96%E9%A1%B5.png" width="80%"/></div>
 

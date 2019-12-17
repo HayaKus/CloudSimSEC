@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="cloudsim-3.0.3:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/cloudsim_3_0_3_jar</output-path>
+    <root id="archive" name="cloudsim-3.0.3.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="cloudsim-3.0.3" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/cloudsim-3.0.3-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/commons-math3-3.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/RBF_Load.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/javabuilder.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/cloudsim-3.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/substance.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/cloudsim-examples-3.0.3-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/cloudsim-examples-3.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/commons-lang3-3.8.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/flanagan.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/cloudsim-new.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
