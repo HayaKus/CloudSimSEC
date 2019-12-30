@@ -63,6 +63,9 @@ CloudSimSEC is an extension of Cloudsim specifically designed to simulate the en
 Download install pack (539MB): [CloudSimSEC__setup.exe](https://twocups.cn/download/CloudSimSEC__setup.exe)  
 **下载安装包（539MB）：[CloudSimSEC__setup.exe](https://twocups.cn/download/CloudSimSEC__setup.exe)**
 
+Note: Do not install this software in the "C://", otherwise there will be a problem that the user does not have permission to open this software.  
+**注意：不要把这个软件安装在C盘，否则会出现用户没有权限打开软件的问题。**  
+
 In addition, there are some environments that must be installed locally, i.e.,  
 **此外，还有以下环境必须被安装：**
 
