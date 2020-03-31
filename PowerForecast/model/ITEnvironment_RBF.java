@@ -32,6 +32,7 @@ public class ITEnvironment_RBF {
 			row[i]=example[i][0];
 		}
 
+		// MWNumericArray is the matrix
 		MWNumericArray ayNum = new MWNumericArray(input,MWClassID.DOUBLE);
 
 		RBFfc rbffc = new RBFfc();
@@ -39,6 +40,7 @@ public class ITEnvironment_RBF {
 		String[] resultsStr = resultsOb[0].toString().split("  |   |ÖÁ|ÁÐ");
 		List<Double> resultsDou = new ArrayList<>();
 
+		// multiply means the Scientific notation
 		if (resultsStr[1].contains("1.0e")) {
 			//make the multiply
 			double multiply = 0;
