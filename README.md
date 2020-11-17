@@ -30,6 +30,9 @@ If you found it helpful to you, please give me a star and recommend it to your f
 	- [Contributors 贡献者](#contributors-贡献者)
 - [License 使用许可](#license-使用许可)
 
+## Update 更新 2020.11.17
+- **能够通过RBF神经网络模拟云数据中心的能耗**
+
 ## Background 背景
 
 There are more and more traffic demands of cloud data centers in recent years, leading to the continuous establishment and expansion of cloud data centers around the world. Although their economic utility is increasing, huge energy consumption has also received more and more attention. The problem of energy consumption in cloud data centers has changed from past distribution to present centralization, because cloud computing can achieve the flexibility and scalability of computing resources (such as networks, storage, applications, and services). In order to optimize the energy consumption of the cloud data center, it is necessary to establish an energy consumption simulator for the cloud data center.  
