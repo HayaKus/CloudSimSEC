@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cloudsim-new">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/cloudsim-new.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
