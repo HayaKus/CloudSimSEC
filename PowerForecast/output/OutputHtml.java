@@ -9,6 +9,7 @@ package output;
 import com.mathworks.toolbox.javabuilder.MWException;
 import gui.GUI;
 import gui.LogThreadSendToArea;
+import model.Evaluation_QoS;
 import model.ITEnvironment_RBF;
 import model.IT_RBF;
 import org.cloudbus.cloudsim.Host;
@@ -30,16 +31,27 @@ public class OutputHtml {
 
 	public static double[] AllEnergy= new double[4];
 
-	//all the powers after computing
+	// 计算后的所有功率
 	public static List<Double> allPowers;
+
+	// 计算后的所有QoS评估值
+	public static List<Double> allQoSs;
+
 	// this is the average power of three algorithm
 	public static List<Double> RRPower;
 	public static List<Double> DVFSPower;
 	public static List<Double> STPower;
+
+	public static List<Double> RRQoS;
+	public static List<Double> DVFSQoS;
+	public static List<Double> STQoS;
+
 	//other power of data center
 	public static List<Double> otherPowers;
+
 	//postition of interrupt in the allPowers
 	public static int[] PoIs;
+
 	//the last position of one of algorithms in the allPowers
 	public static int[] threePoI;
 
@@ -72,11 +84,11 @@ public class OutputHtml {
 		DecimalFormat df2 = new DecimalFormat("###,###.###");
 
 		// Header
-		String header = "<!doctype html><html><head><meta charset='utf-8'><title>"+ Constant.DATACENTER_NAME +" 能耗模拟</title><link href='css/bootstrap.min.css' rel='stylesheet'><link href='css/bootstrap.css' rel='stylesheet'><script src='RGraph.common.core.js'></script><script src='RGraph.bar.js'></script><script src='RGraph.line.js'></script><link href='css/styles.css' rel='stylesheet'></head>\t<nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../output/index.html'><img src='images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li class='active'><a href=./index.html>主页</a></li>" + menu + "</ul></div></div></nav></header>";
+		String header = "<!doctype html><html><head><meta charset='utf-8'><title>边缘计算服务器集群能耗和评估模拟平台</title><link href='css/bootstrap.min.css' rel='stylesheet'><link href='css/bootstrap.css' rel='stylesheet'><script src='RGraph.common.core.js'></script><script src='RGraph.bar.js'></script><script src='RGraph.line.js'></script><link href='css/styles.css' rel='stylesheet'></head>\t<nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../output/index.html'><img src='images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li class='active'><a href=./index.html>主页</a></li>" + menu + "</ul></div></div></nav></header>";
 		String footer = "</div></body></html>";
 
 		// Building secondary pages
-		String header2 = "<!doctype html><html><head><meta charset='utf-8'><title>"+ Constant.DATACENTER_NAME +" 能耗模拟</title><link href='../css/bootstrap.min.css' rel='stylesheet'><link href='../css/bootstrap.css' rel='stylesheet'><link href='../css/styles.css' rel='stylesheet'><script src='../RGraph.common.core.js'></script><script src='../RGraph.common.tooltips.js'></script><script src='../RGraph.common.dynamic.js'></script><script src='../RGraph.bar.js'></script><script src='../RGraph.line.js'></script></head><header id='header'><nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../index.html'><img src='../images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li><a href='../index.html'>主页</a></li>" + menu + "</ul></div></div></nav></header>";
+		String header2 = "<!doctype html><html><head><meta charset='utf-8'><title>边缘计算服务器集群能耗和评估模拟平台</title><link href='../css/bootstrap.min.css' rel='stylesheet'><link href='../css/bootstrap.css' rel='stylesheet'><link href='../css/styles.css' rel='stylesheet'><script src='../RGraph.common.core.js'></script><script src='../RGraph.common.tooltips.js'></script><script src='../RGraph.common.dynamic.js'></script><script src='../RGraph.bar.js'></script><script src='../RGraph.line.js'></script></head><header id='header'><nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../index.html'><img src='../images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li><a href='../index.html'>主页</a></li>" + menu + "</ul></div></div></nav></header>";
 		String customHeader = header2.replaceAll("./exports/", "./");
 
 		/**
@@ -134,10 +146,18 @@ public class OutputHtml {
 		*/
 
 		List<Double> Powers = new ArrayList<>();
+		List<Double> QoSs = new ArrayList<>();
+
 		RRPower = new ArrayList<>();
 		DVFSPower = new ArrayList<>();
 		STPower = new ArrayList<>();
+
+		RRQoS = new ArrayList<>();
+		DVFSQoS = new ArrayList<>();
+		STQoS = new ArrayList<>();
+
 		double tempPower = 0;
+		double tempQoS = 0;
 		int lengthOfTime;
 
 		lengthOfTime = PoIs[1]-PoIs[0];
@@ -146,28 +166,40 @@ public class OutputHtml {
 			//50 times
 			for(int j=0;j<Constant.NUMBER_HOST;j++){
 				tempPower += allPowers.get(j*lengthOfTime+tempi);
+				tempQoS += allQoSs.get(j*lengthOfTime+tempi);
 			}
 			Powers.add(tempPower);
-			RRPower.add(tempPower/Constant.NUMBER_HOST);
+			QoSs.add(tempQoS);
+			RRPower.add(tempPower / Constant.NUMBER_HOST);
+			RRQoS.add(tempQoS / Constant.NUMBER_HOST);
 			tempPower = 0;
+			tempQoS = 0;
 		}
 		lengthOfTime = PoIs[1+Constant.NUMBER_HOST]-PoIs[0+Constant.NUMBER_HOST];
 		for(int tempi=0;tempi<lengthOfTime;tempi++){
 			for(int j=0;j<Constant.NUMBER_HOST;j++){
 				tempPower += allPowers.get(j*lengthOfTime+tempi+threePoI[0]+1);
+				tempQoS += allQoSs.get(j*lengthOfTime+tempi+threePoI[0]+1);
 			}
 			Powers.add(tempPower);
-			DVFSPower.add(tempPower/Constant.NUMBER_HOST);
+			QoSs.add(tempQoS);
+			DVFSPower.add(tempPower / Constant.NUMBER_HOST);
+			DVFSQoS.add(tempQoS / Constant.NUMBER_HOST);
 			tempPower = 0;
+			tempQoS = 0;
 		}
 		lengthOfTime = PoIs[1+Constant.NUMBER_HOST*2]-PoIs[0+Constant.NUMBER_HOST*2];
 		for(int tempi=0;tempi<lengthOfTime;tempi++){
 			for(int j=0;j<Constant.NUMBER_HOST;j++){
 				tempPower += allPowers.get(j*lengthOfTime+tempi+threePoI[1]+1);
+				tempQoS += allQoSs.get(j*lengthOfTime+tempi+threePoI[1]+1);
 			}
 			Powers.add(tempPower);
-			STPower.add(tempPower/Constant.NUMBER_HOST);
+			QoSs.add(tempQoS);
+			STPower.add(tempPower / Constant.NUMBER_HOST);
+			STQoS.add(tempQoS / Constant.NUMBER_HOST);
 			tempPower = 0;
+			tempQoS = 0;
 		}
 
 		otherPowers = new ArrayList<>();
@@ -226,9 +258,9 @@ public class OutputHtml {
 									.getName() + ".html'>" + monitor.getName() + "</a></li>");
 
 			monitorGraphs = "<script> window.onload = function (){" + makeLine(monitor) + hostCanvas[1] + "}</script>";
-			graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:150px;margin-bottom:30px;'>所有物理主机的平均功率(W)</h2><div class='span12'><h3 style='margin-top:10px;'>平均功率/W</h3><canvas id='powerGraph" + monitor
+			graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:150px;margin-bottom:30px;'>所有物理服务器的平均功率(W)</h2><div class='span12'><h3 style='margin-top:10px;'>平均功率/W</h3><canvas id='powerGraph" + monitor
 					.getName() + "' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3><script></script></div></div>";
-			graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:40px;margin-bottom:30px;'>所有物理主机的平均利用率(%)</h2><div class='span12'><h3 style='margin-top:10px;'>平均利用率/%</h3><canvas id='utilGraph" + monitor
+			graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:40px;margin-bottom:30px;'>所有物理服务器的平均评估值</h2><div class='span12'><h3 style='margin-top:10px;'>平均评估值</h3><canvas id='utilGraph" + monitor
 					.getName() + "' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3><script></script></div></div>";
 			graphMonitor += hostCanvas[0];
 
@@ -270,7 +302,7 @@ public class OutputHtml {
 		
 		// Graph (1st page)
 
-		String simParName[]={"总模拟时间(s)", "总物理主机数量","总虚拟机数量","总云任务数量","数据中心最小能耗(kW·h)","虚拟机的总计算能力(MIPS)"};
+		String simParName[]={"总模拟时间(s)", "总物理服务器数量","总虚拟机数量","总云任务数量","数据中心最小能耗(kW·h)","虚拟机的总计算能力(MIPS)"};
 
 		AllEnergy[0]=allPower;
 		inputPower = AllEnergy[0] + "," + AllEnergy[1] + "," + AllEnergy[2] + "," + AllEnergy[3];
@@ -295,8 +327,8 @@ public class OutputHtml {
 				"<li><a href='../exports/combined.html'>混合对比</a></li>",
 				"<li class='active'><a href='#'>混合对比</a></li>");
 		monitorGraphs = "<script> window.onload = function (){" + hostCompinedCanvas[1] + "}</script>";
-		graphMonitor = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:150px;margin-bottom:30px;'>所有物理主机的平均功率(W)</h2><div class='span12'><h3 style='margin-top:10px;'>平均功率/W</h3><canvas id='powerGraph' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3></div></div>";
-		graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:40px;margin-bottom:30px;'>所有物理主机的平均利用率(%)</h2><div class='span12'><h3 style='margin-top:10px;'>平均利用率/%</h3><canvas id='utilGraph' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3></div></div>";
+		graphMonitor = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:150px;margin-bottom:30px;'>所有物理服务器的平均功率(W)</h2><div class='span12'><h3 style='margin-top:10px;'>平均功率/W</h3><canvas id='powerGraph' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3></div></div>";
+		graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:40px;margin-bottom:30px;'>所有物理服务器的平均评估值</h2><div class='span12'><h3 style='margin-top:10px;'>平均评估值</h3><canvas id='utilGraph' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3></div></div>";
 		graphMonitor += hostCompinedCanvas[0];
 		try {
 
@@ -314,12 +346,12 @@ public class OutputHtml {
 
 	
 		// Printing Hosts
-		String host = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h1 style='margin-top:40px;margin-bottom:30px;'>物理主机</h1>";
+		String host = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h1 style='margin-top:40px;margin-bottom:30px;'>物理服务器</h1>";
 		for ( i = 0; i < Constant.HOST_TYPES; i++) {
 			if (Constant.VM_HOST_NUMBERS[i] == 0) {
 				continue;
 			}
-			host += "<div class='span4'><table class='table table-bordered'><thead><tr><th>第 " + i + " 类主机</th></tr></thead><tbody>" + "<tr><td>数量</td><td>" + Constant.VM_HOST_NUMBERS[i] + "</td></tr>" + "<tr><td>处理能力(MIPS)</td><td>" + Constant.HOST_MIPS[i] + "</td></tr>" + "<tr><td>核心数</td><td>" + Constant.HOST_PES[i] + "</td></tr>" + "<tr><td>内存(MB)</td><td>" + Constant.HOST_RAM[i] + "</td></tr>" + "<tr><td>带宽(bit/s)</td><td>" + Constant.HOST_BW + "</td></tr>" + "<tr><td>存储(B)</td><td>" + Constant.HOST_STORAGE + "</td></tr>" + "<tr><td>最大功耗(瓦)</td><td>" + Constant.HOST_MAX_POWER[i] + "</td></tr>" + "<tr><td>空闲功耗(瓦)</td><td>" + df
+			host += "<div class='span4'><table class='table table-bordered'><thead><tr><th>第 " + i + " 类服务器</th></tr></thead><tbody>" + "<tr><td>数量</td><td>" + Constant.VM_HOST_NUMBERS[i] + "</td></tr>" + "<tr><td>处理能力(MIPS)</td><td>" + Constant.HOST_MIPS[i] + "</td></tr>" + "<tr><td>核心数</td><td>" + Constant.HOST_PES[i] + "</td></tr>" + "<tr><td>内存(MB)</td><td>" + Constant.HOST_RAM[i] + "</td></tr>" + "<tr><td>带宽(bit/s)</td><td>" + Constant.HOST_BW + "</td></tr>" + "<tr><td>存储(B)</td><td>" + Constant.HOST_STORAGE + "</td></tr>" + "<tr><td>最大功耗(瓦)</td><td>" + Constant.HOST_MAX_POWER[i] + "</td></tr>" + "<tr><td>空闲功耗(瓦)</td><td>" + df
 					.format(Constant.HOST_MIN_POWER[i]) + "</td></tr></tbody></table></div>";
 		}
 		host += "</div>";
@@ -358,12 +390,20 @@ public class OutputHtml {
 		}
 		users += "</div>";
 
+		// 打印QoS参数相关指标
+		String qosStr = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h1 style='margin-top:40px;margin-bottom:30px;'>基于QoS感知区域评估的相关参数</h1>";
+		qosStr += "<div class='span4'><table class='table table-bordered'><thead><tr><th>CPU利用率</th></tr></thead><tbody>" + "<tr><td>最佳值（%）</td><td>" + Constant.BEST_CPU + "</td></tr>" + "<tr><td>最差值（%）</td><td>" + Constant.WORST_CPU + "</td></tr>" + "<tr><td>权重（%）</td><td>" + Constant.WEIGHT_CPU + "</td></tr>" + "</tbody></table></div>";
+		qosStr += "<div class='span4'><table class='table table-bordered'><thead><tr><th>服务器负载</th></tr></thead><tbody>" + "<tr><td>最佳值（台）</td><td>" + Constant.BEST_HOSTLOAD + "</td></tr>" + "<tr><td>最差值（台）</td><td>" + Constant.WORST_HOSTLOAD + "</td></tr>" + "<tr><td>权重（%）</td><td>" + Constant.WEIGHT_HOSTLOAD + "</td></tr>" + "</tbody></table></div>";
+		qosStr += "<div class='span4'><table class='table table-bordered'><thead><tr><th>带宽</th></tr></thead><tbody>" + "<tr><td>最佳值（GB）</td><td>" + Constant.BEST_BANDWIDTH + "</td></tr>" + "<tr><td>最差值（GB）</td><td>" + Constant.WORST_BANDWIDTH + "</td></tr>" + "<tr><td>权重（%）</td><td>" + Constant.WEIGHT_BANDWIDTH + "</td></tr>" + "</tbody></table></div>";
+		qosStr += "<div class='span4'><table class='table table-bordered'><thead><tr><th>内存利用率</th></tr></thead><tbody>" + "<tr><td>最佳值（%）</td><td>" + Constant.BEST_RAM + "</td></tr>" + "<tr><td>最差值（%）</td><td>" + Constant.WORST_RAM + "</td></tr>" + "<tr><td>权重（%）</td><td>" + Constant.WEIGHT_RAM + "</td></tr>" + "</tbody></table></div>";
+		qosStr += "</div>";
+
 		try {
 
 			PrintStream out = new PrintStream(new FileOutputStream(
 					"output/index.html"));
 
-			out.println(header + graphs + host + vm + users + cloudlet + footer);
+			out.println(header + graphs + host + vm + users + cloudlet + qosStr + footer);
 			out.close();
 
 		} catch (FileNotFoundException e) {
@@ -397,8 +437,12 @@ public class OutputHtml {
 		 */
 
 		List<Double> Powers = new ArrayList<>();
+		List<Double> QoSs = new ArrayList<>();
+
 		double tempPower = 0;
+		double tempQoS = 0;
 		int lengthOfTime;
+
 		if(monitor.getName() == "RR"){
 			lengthOfTime = PoIs[1]-PoIs[0];
 			//267 times
@@ -406,41 +450,57 @@ public class OutputHtml {
 				//50 times
 				for(int j=0;j<Constant.NUMBER_HOST;j++){
 					tempPower += allPowers.get(j*lengthOfTime+i);
+					tempQoS += allQoSs.get(j*lengthOfTime+i);
 				}
-				Powers.add(tempPower/Constant.NUMBER_HOST);
+				Powers.add(tempPower / Constant.NUMBER_HOST);
+				QoSs.add(tempQoS / Constant.NUMBER_HOST);
 				tempPower = 0;
+				tempQoS = 0;
 			}
 		}else if(monitor.getName() == "DVFS"){
 			lengthOfTime = PoIs[1+Constant.NUMBER_HOST]-PoIs[0+Constant.NUMBER_HOST];
 			for(int i=0;i<lengthOfTime;i++){
 				for(int j=0;j<Constant.NUMBER_HOST;j++){
 					tempPower += allPowers.get(j*lengthOfTime+i+threePoI[0]+1);
+					tempQoS += allQoSs.get(j*lengthOfTime+i+threePoI[0]+1);
 				}
-				Powers.add(tempPower/Constant.NUMBER_HOST);
+				Powers.add(tempPower / Constant.NUMBER_HOST);
+				QoSs.add(tempQoS / Constant.NUMBER_HOST);
 				tempPower = 0;
+				tempQoS = 0;
 			}
 		}else if(monitor.getName() == "ST"){
 			lengthOfTime = PoIs[1+Constant.NUMBER_HOST*2]-PoIs[0+Constant.NUMBER_HOST*2];
 			for(int i=0;i<lengthOfTime;i++){
 				for(int j=0;j<Constant.NUMBER_HOST;j++){
 					tempPower += allPowers.get(j*lengthOfTime+i+threePoI[1]+1);
+					tempQoS += allQoSs.get(j*lengthOfTime+i+threePoI[1]+1);
 				}
 				Powers.add(tempPower/Constant.NUMBER_HOST);
+				QoSs.add(tempQoS/Constant.NUMBER_HOST);
 				tempPower = 0;
+				tempQoS = 0;
 			}
 		}
 
 		// take it to the format of the format
-		String PowersStr = " " + String.valueOf(Powers.get(0));
+		String PowersStr = " " + Powers.get(0);
 		Powers.remove(0);
-		for (double x : Powers) {
-			PowersStr += ", "+String.valueOf(x);
+		for (double power : Powers) {
+			PowersStr += ", " + power;
+		}
+
+		String QoSsStr = " " + QoSs.get(0);
+		QoSs.remove(0);
+		for (double qos : QoSs) {
+			QoSsStr += ", " + qos;
 		}
 
 		String powerUtilHtml = "var AverPower" + monitor.getName() + " = new RGraph.Line('powerGraph" + monitor
 				//The Average Power in active hosts(W) of three kinds of algorithm
 				// Last version: monitor.getAverPower()
-				.getName() + "', [" + PowersStr + "]);AverPower" + monitor
+				.getName() + "', [" +
+				PowersStr + "]);AverPower" + monitor
 				.getName() + ".Set('chart.labels', [" + monitor.getTimes() + "]);" + customTooltipsPowerAv + "AverPower" + monitor
 				.getName() + ".Set('chart.colors', ['" + monitor.getColor() + "']);AverPower" + monitor
 				.getName() + ".Set('chart.linewidth', 3);AverPower" + monitor
@@ -448,7 +508,8 @@ public class OutputHtml {
 				.getName() + ".Set('chart.shadow', true);AverPower" + monitor
 				.getName() + ".Draw();" + "var Util" + monitor.getName() + " = new RGraph.Line('utilGraph" + monitor
 				//The Average Utilization in active hosts (%) of three kinds of algorithm
-				.getName() + "', [" + monitor.getAverUtil() + "]);" + "Util" + monitor
+				.getName() + "', [" +
+				QoSsStr + "]);" + "Util" + monitor
 				.getName() + ".Set('chart.labels', [" + monitor.getTimes() + "]);Util" + monitor
 				.getName() + ".Set('chart.colors', ['" + monitor.getColor() + "']);Util" + monitor
 				.getName() + ".Set('chart.ymax', 100);" + customTooltipsUtilAv + "Util" + monitor
@@ -464,7 +525,7 @@ public class OutputHtml {
 		System.out.println("Lam:" +monitor.getName() + "OutputHtml.makeHostLine");
 
 		GUI.setProgressBar(monitor.getName() + "makeHostLine");
-		LogThreadSendToArea l = new LogThreadSendToArea("正在 绘制算法 " + monitor.getName() + " 的主机能耗图……");
+		LogThreadSendToArea l = new LogThreadSendToArea("正在 绘制算法 " + monitor.getName() + " 的服务器能耗图……");
 		l.start();
 		
 		List<Host> hostList = monitor.getHostList();
@@ -535,6 +596,8 @@ public class OutputHtml {
 		 */
 
 		List<Double> Powers = new ArrayList<>();
+		List<Double> QoSs = new ArrayList<>();
+
 		List<Integer> PoI = new ArrayList<>();
 
 		int tempCounter = 0;
@@ -544,16 +607,19 @@ public class OutputHtml {
 			lengthoftime = PoIs[1]-PoIs[0];
 			for(int i=0;i<threePoI[0]+1;i++){
 				Powers.add(allPowers.get(i));
+				QoSs.add(allQoSs.get(i));
 			}
 		}else if(monitor.getName() == "DVFS"){
 			lengthoftime = PoIs[1+Constant.NUMBER_HOST]-PoIs[0+Constant.NUMBER_HOST];
 			for(int i=threePoI[0]+1;i<threePoI[1]+1;i++){
 				Powers.add(allPowers.get(i));
+				QoSs.add(allQoSs.get(i));
 			}
 		}else if(monitor.getName() == "ST"){
 			lengthoftime = PoIs[1+Constant.NUMBER_HOST*2]-PoIs[0+Constant.NUMBER_HOST*2];
 			for(int i=threePoI[1]+1;i<threePoI[2]+1;i++){
 				Powers.add(allPowers.get(i));
+				QoSs.add(allQoSs.get(i));
 			}
 		}
 
@@ -562,15 +628,18 @@ public class OutputHtml {
 		}
 
 		String[] powersStr = new String[PoI.size()];
+		String[] QoSsStr = new String[PoI.size()];
 
 		boolean firstComeIn;
 		for (int i = 0; i<Constant.NUMBER_HOST; i++) {
 			firstComeIn = true;
 			for (int j = 0; j < lengthoftime; j++) {
 				if (firstComeIn) {
-					powersStr[tempCounter2] = " " + String.valueOf(Powers.get(j + tempCounter));
+					powersStr[tempCounter2] = " " + Powers.get(j + tempCounter);
+					QoSsStr[tempCounter2] = " " + QoSs.get(j + tempCounter);
 				} else {
-					powersStr[tempCounter2] += ", " + String.valueOf(Powers.get(j + tempCounter));
+					powersStr[tempCounter2] += ", " + Powers.get(j + tempCounter);
+					QoSsStr[tempCounter2] += ", " + QoSs.get(j + tempCounter);
 				}
 				firstComeIn = false;
 			}
@@ -585,8 +654,8 @@ public class OutputHtml {
 			PowerHostPlus big = (PowerHostPlus) h;
 			int nameVar = big.getId();
 
-			graphMonitor[0] += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>主机 " + nameVar + " 的利用率(%)</h3><h4 style='margin-top:10px;'>利用率/%</h4><canvas id='util" + nameVar + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div>";
-			graphMonitor[0] += "<div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>主机 " + nameVar + " 的功率(W)</h3><h4 style='margin-top:10px;'>功率/W</h4><canvas id='power" + nameVar + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div></div>";
+			graphMonitor[0] += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + nameVar + " 的评估值</h3><h4 style='margin-top:10px;'>评估值</h4><canvas id='util" + nameVar + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div>";
+			graphMonitor[0] += "<div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + nameVar + " 的功率(W)</h3><h4 style='margin-top:10px;'>功率/W</h4><canvas id='power" + nameVar + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div></div>";
 
 			boolean firstTime = true;
 			String averUtil = "";
@@ -699,8 +768,13 @@ public class OutputHtml {
 
 			// The Utilization (%) and Power at host of three kinds of algorithm
 			// Last version: averPower
-			graphMonitor[1] += "var Power" + nameVar + " = new RGraph.Line('power" + nameVar + "', [" + powersStr[counter++] + "]);Power" + nameVar + ".Set('chart.tooltips', [" + customTooltipsPower + "']);Power" + nameVar + ".Set('chart.labels', [" + times + "]);Power" + nameVar + ".Set('chart.colors', ['" + monitor
-					.getColor() + "']);" + "Power" + nameVar + ".Set('chart.linewidth', 3);Power" + nameVar + ".Set('chart.shadow', true);Power" + nameVar + ".Set('chart.ymax', " + maxPower + ");Power" + nameVar + ".Draw();" + "var Util" + nameVar + " = new RGraph.Line('util" + nameVar + "', [" + averUtil + "]);Util" + nameVar + ".Set('chart.ymax', 100);Util" + nameVar + ".Set('chart.linewidth', 3);Util" + nameVar + ".Set('chart.tooltips', [" + customTooltipsUtil + "']);Util" + nameVar + ".Set('chart.colors', ['" + monitor
+			graphMonitor[1] += "var Power" + nameVar + " = new RGraph.Line('power" + nameVar + "', [" +
+					powersStr[counter] + "]);Power" + nameVar + ".Set('chart.tooltips', [" + customTooltipsPower + "']);Power" + nameVar + ".Set('chart.labels', [" + times + "]);Power" + nameVar + ".Set('chart.colors', ['" + monitor
+					.getColor() + "']);" + "Power" + nameVar + ".Set('chart.linewidth', 3);Power" + nameVar + ".Set('chart.shadow', true);Power" + nameVar + ".Set('chart.ymax', " + maxPower + ");Power" + nameVar + ".Draw();" +
+					"var Util" + nameVar + " = new RGraph.Line('util" + nameVar + "', [" +
+//					averUtil +
+					QoSsStr[counter++] +
+					"]);Util" + nameVar + ".Set('chart.ymax', 100);Util" + nameVar + ".Set('chart.linewidth', 3);Util" + nameVar + ".Set('chart.tooltips', [" + customTooltipsUtil + "']);Util" + nameVar + ".Set('chart.colors', ['" + monitor
 					.getColor() + "']);Util" + nameVar + ".Set('chart.shadow', true);" + "Util" + nameVar + ".Set('chart.labels', [" + times + "]);Util" + nameVar + ".Draw();";
 		}
 
@@ -736,19 +810,30 @@ public class OutputHtml {
 			 */
 
 			List<Double> Powers = new ArrayList<>();
+			List<Double> QoSs = new ArrayList<>();
+
 			if(monitor.getName() == "RR"){
 				Powers = RRPower;
+				QoSs = RRQoS;
 			}else if(monitor.getName() == "DVFS"){
 				Powers = DVFSPower;
+				QoSs = DVFSQoS;
 			}else if(monitor.getName() == "ST"){
 				Powers = STPower;
+				QoSs = STQoS;
 			}
 
 			// take it to the format of the format
-			String PowersStr = " " + String.valueOf(Powers.get(0));
+			String PowersStr = " " + Powers.get(0);
 			Powers.remove(0);
-			for (double x : Powers) {
-				PowersStr += ", "+String.valueOf(x);
+			for (double power : Powers) {
+				PowersStr += ", " + power;
+			}
+
+			String QoSsStr = " " + QoSs.get(0);
+			QoSs.remove(0);
+			for (double qos : QoSs) {
+				QoSsStr += ", " + qos;
 			}
 
 			String customTooltipsUtilAv = monitor.getAverUtil().replaceAll(" ",
@@ -759,23 +844,24 @@ public class OutputHtml {
 			customTooltipsPowerAv = customTooltipsPowerAv.replaceAll(",", "',");
 			//The Average Power in active hosts (W) of Combined
 			// last version: monitor.getAverPower()
-			powerUtilHtml += "var AverPower" + monitor.getName() + " = new RGraph.Line('powerGraph', [" +PowersStr
-					+ "]);AverPower" + monitor.getName() + ".Set('chart.labels', [" + monitor
+			powerUtilHtml += "var AverPower" + monitor.getName() + " = new RGraph.Line('powerGraph', [" +
+					PowersStr + "]);AverPower" + monitor.getName() + ".Set('chart.labels', [" + monitor
 					.getTimes() + "]);AverPower" + monitor.getName() + ".Set('chart.colors', ['" + monitor
 					.getColor() + "']);AverPower" + monitor.getName() + ".Set('chart.linewidth', 3);AverPower" + monitor
 					.getName() + ".Set('chart.ymax', " + Constant.MAXPOWERS + ");" +
-			// "AverPower" + monitor.getName() +
-			// ".Set('chart.tooltips', [" + customTooltipsPowerAv +
-			// "']);" +
-			"AverPower" + monitor.getName() + ".Set('chart.shadow', true);AverPower" + monitor
+					// "AverPower" + monitor.getName() +
+					// ".Set('chart.tooltips', [" + customTooltipsPowerAv +
+					// "']);" +
+					"AverPower" + monitor.getName() + ".Set('chart.shadow', true);AverPower" + monitor
 					//The Average Utilization in active hosts (%) of Combined
-					.getName() + ".Draw();" + "var Util" + monitor.getName() + " = new RGraph.Line('utilGraph', [" + monitor
-					.getAverUtil() + "]);" + "Util" + monitor.getName() + ".Set('chart.labels', [" + monitor
+					.getName() + ".Draw();" + "var Util" + monitor.getName() + " = new RGraph.Line('utilGraph', [" +
+					//monitor.getAverUtil() + "]);" + "Util" + monitor.getName() + ".Set('chart.labels', [" + monitor
+					QoSsStr + "]);" + "Util" + monitor.getName() + ".Set('chart.labels', [" + monitor
 					.getTimes() + "]);Util" + monitor.getName() + ".Set('chart.colors', ['" + monitor
 					.getColor() + "']);" +
-			// "Util"+ monitor.getName() + ".Set('chart.tooltips', [" +
-			// customTooltipsUtilAv + "']);" +
-			"Util" + monitor.getName() + ".Set('chart.ymax', 100);	Util" + monitor
+					// "Util"+ monitor.getName() + ".Set('chart.tooltips', [" +
+					// customTooltipsUtilAv + "']);" +
+					"Util" + monitor.getName() + ".Set('chart.ymax', 100);	Util" + monitor
 					.getName() + ".Set('chart.linewidth', 3);Util" + monitor
 					.getName() + ".Set('chart.shadow', true);Util" + monitor
 					.getName() + ".Draw();";
@@ -842,8 +928,9 @@ public class OutputHtml {
 		List<Double> Powers = IT_RBF.getPowerNN(allVar);
 		*/
 
-		List<Double> Powers = new ArrayList<>();
-		Powers = allPowers;
+		List<Double> Powers = allPowers;
+		List<Double> QoSs = allQoSs;
+
 		List<Integer> PoI = new ArrayList<>();
 
 		for(int i=0;i<Constant.NUMBER_HOST;i++){
@@ -857,17 +944,20 @@ public class OutputHtml {
 		}
 
 		String[] powersStr = new String[PoI.size()];
+		String[] QoSsStr = new String[PoI.size()];
 
 		int tempCounter = 0;
 		int tempCounter2 = 0;
 		boolean firstComeIn;
-		for (int i = 0; i<PoI.size(); i++) {
+		for (int i = 0; i < PoI.size(); i++) {
 			firstComeIn = true;
 			for (int j = 0; j < PoI.get(i); j++) {
 				if (firstComeIn) {
-					powersStr[tempCounter2] = " " + String.valueOf(Powers.get(j + tempCounter));
+					powersStr[tempCounter2] = " " + Powers.get(j + tempCounter);
+					QoSsStr[tempCounter2] = " " + QoSs.get(j + tempCounter);
 				} else {
-					powersStr[tempCounter2] += ", " + String.valueOf(Powers.get(j + tempCounter));
+					powersStr[tempCounter2] += ", " + Powers.get(j + tempCounter);
+					QoSsStr[tempCounter2] += ", " + QoSs.get(j + tempCounter);
 				}
 				firstComeIn = false;
 			}
@@ -885,8 +975,8 @@ public class OutputHtml {
 				int hostId = (int) big[0];
 				String nameVar = hostId + monitor.getName();
 				if (firstMonitor) {
-					graphMonitor[0] += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><div class='span6' style='margin-right:4%;'><h3 style='margin-top:40px;margin-bottom:30px;'>主机 " + hostId + " 的利用率(%)</h3><h4 style='margin-top:10px;'>利用率/%</h4><canvas id='util" + hostId + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div>";
-					graphMonitor[0] += "<div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>主机 " + hostId + " 的功率(W)</h3><h4 style='margin-top:10px;'>功率/W</h4><canvas id='power" + hostId + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div></div>";
+					graphMonitor[0] += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><div class='span6' style='margin-right:4%;'><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + hostId + " 的评估值</h3><h4 style='margin-top:10px;'>评估值</h4><canvas id='util" + hostId + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div>";
+					graphMonitor[0] += "<div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + hostId + " 的功率(W)</h3><h4 style='margin-top:10px;'>功率/W</h4><canvas id='power" + hostId + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div></div>";
 				}
 				boolean firstTime = true;
 				String averUtil = "";
@@ -940,7 +1030,8 @@ public class OutputHtml {
 						"'<b>" + monitor.getName() + "</b><br/>");
 				customTooltipsPower = customTooltipsPower.replaceAll(",", "',");
 				// Last version: averPower
-				graphMonitor[1] += "var Power" + nameVar + " = new RGraph.Line('power" + hostId + "', [" + powersStr[counter++]
+				graphMonitor[1] += "var Power" + nameVar + " = new RGraph.Line('power" + hostId + "', [" +
+						powersStr[counter]
 						+ "]);Power" + nameVar + ".Set('chart.labels', [" + monitor
 						.getTimes() + "]);Power" + nameVar + ".Set('chart.colors', ['" + monitor
 						//The Power (W) at host of Combined
@@ -948,7 +1039,10 @@ public class OutputHtml {
 						// "Power" + nameVar + ".Set('chart.tooltips', [" +
 						// customTooltipsPower + "']);" +
 						//The Utilization (%) at host of Combined
-						"Power" + nameVar + ".Draw();" + "var Util" + nameVar + " = new RGraph.Line('util" + hostId + "', [" + averUtil + "]);Util" + nameVar + ".Set('chart.ymax', 100);Util" + nameVar + ".Set('chart.linewidth', 3);Util" + nameVar + ".Set('chart.colors', ['" + monitor
+						"Power" + nameVar + ".Draw();" + "var Util" + nameVar + " = new RGraph.Line('util" + hostId + "', [" +
+//						averUtil +
+						QoSsStr[counter++] +
+						"]);Util" + nameVar + ".Set('chart.ymax', 100);Util" + nameVar + ".Set('chart.linewidth', 3);Util" + nameVar + ".Set('chart.colors', ['" + monitor
 						.getColor() + "']);Util" + nameVar + ".Set('chart.shadow', true);" +
 						// "Util" + nameVar + ".Set('chart.tooltips', [" +
 						// customTooltipsUtil + "']);" +
@@ -1009,6 +1103,9 @@ public class OutputHtml {
 		allPowers = new ArrayList<>();
 		allPowers = IT_RBF.getPowerNN(Vars);
 
+		allQoSs = new ArrayList<>();
+		allQoSs = Evaluation_QoS.getEvaluationByCpuAndHostload(Vars);
+
 		//Third: take the power into the monitors
 		int counter = 0;
 		for (PowerMonitor monitor :monitors ) {
@@ -1025,7 +1122,7 @@ public class OutputHtml {
 
 				for (HostStateHistoryEntry entry : host.getStateHistory() ){
 					time+= entry.getTime() + System.getProperty("line.separator");
-					history+= (entry.getAllocatedMips()*100/host.getTotalMips())+ System.getProperty("line.separator");
+					history+= allQoSs.get(counter) + System.getProperty("line.separator");
 					historyPower+= allPowers.get(counter++) + System.getProperty("line.separator");
 				}
 

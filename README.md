@@ -14,6 +14,7 @@ If you found it helpful to you, please give me a star and recommend it to your f
 
 ## Table of Contents 内容列表
 
+- [Update 更新](#update-更新)
 - [Background 背景](#background-背景)
 - [Download/Install 下载/安装](#downloadinstall-下载安装)
 - [Usage 使用说明](#usage-使用说明)
@@ -30,7 +31,14 @@ If you found it helpful to you, please give me a star and recommend it to your f
 	- [Contributors 贡献者](#contributors-贡献者)
 - [License 使用许可](#license-使用许可)
 
-## Update 更新分支qosEvaluation 2020.11.17
+## Update 更新  
+### 2020.11.18 新建分支qosEvaluation
+- 初始页面新增“QoS评估”页面，可以设置基于QoS感知区域评估的相关参数
+- 结果页面的“首页”页面中新增“基于QoS感知区域评估的相关参数”一栏
+- 结果页面的“混合对比”页面、“RR”页面、“DVFS”页面、“ST”页面中“所有物理主机的平均利用率”修改为“所有物理服务器的平均评估值”
+- 结果页面的“混合对比”页面、“RR”页面、“DVFS”页面、“ST”页面中特定服务器的“利用率”修改为特定服务器的“评估值”
+- 关于基于QoS感知区域的评估算法，可参考该篇论文：[Dynamic service migration in ultra-dense multi-access edge computing network for high-mobility scenarios](https://jwcn-eurasipjournals.springeropen.com/articles/10.1186/s13638-020-01805-2)
+
 
 ## Background 背景
 

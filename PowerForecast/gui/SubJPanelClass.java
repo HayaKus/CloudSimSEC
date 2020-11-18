@@ -93,6 +93,23 @@ public class SubJPanelClass {
     static JComboBox<String> j523Text = new JComboBox<String>(taskType);
     static JComboBox<String> j524Text = new JComboBox<String>(taskType);
 
+    //p6
+    static JTextField j611Text = new JTextField("");
+    static JTextField j612Text = new JTextField("");
+    static JTextField j613Text = new JTextField("");
+
+    static JTextField j621Text = new JTextField("");
+    static JTextField j622Text = new JTextField("");
+    static JTextField j623Text = new JTextField("");
+
+    static JTextField j631Text = new JTextField("");
+    static JTextField j632Text = new JTextField("");
+    static JTextField j633Text = new JTextField("");
+
+    static JTextField j641Text = new JTextField("");
+    static JTextField j642Text = new JTextField("");
+    static JTextField j643Text = new JTextField("");
+
     // p1
     protected static JPanel getDataCenterPanel() {
         JPanel p1 = new JPanel();
@@ -504,6 +521,125 @@ public class SubJPanelClass {
         return p1;
     }
 
+    // p6
+    protected static JPanel getQoSPanel() {
+        JPanel p1 = new JPanel();
+
+        p1.setLayout(null);
+
+        // QoS参数的相关指标
+        JLabel j1 = new JLabel("最佳值", JLabel.CENTER);
+        JLabel j2 = new JLabel("最差值", JLabel.CENTER);
+        JLabel j3 = new JLabel("权重", JLabel.CENTER);
+
+        j1.setBounds(120, 50, 100, 30);
+        j2.setBounds(260, 50, 100, 30);
+        j3.setBounds(400, 50, 100, 30);
+
+        p1.add(j1);
+        p1.add(j2);
+        p1.add(j3);
+
+        // cpu
+        JLabel j610 = new JLabel("CPU利用率:", JLabel.RIGHT);
+
+        j610.setBounds(0, 90, 110, 30);
+        j611Text.setBounds(120, 90, 100, 30);
+        j612Text.setBounds(260, 90, 100, 30);
+        j613Text.setBounds(400, 90, 100, 30);
+
+        JLabel jLast11 = new JLabel("%", JLabel.CENTER);
+        JLabel jLast12 = new JLabel("%", JLabel.CENTER);
+        JLabel jLast13 = new JLabel("%", JLabel.CENTER);
+
+        jLast11.setBounds(180, 90, 100, 30);
+        jLast12.setBounds(320, 90, 100, 30);
+        jLast13.setBounds(460, 90, 100, 30);
+
+        p1.add(j610);
+        p1.add(j611Text);
+        p1.add(j612Text);
+        p1.add(j613Text);
+        p1.add(jLast11);
+        p1.add(jLast12);
+        p1.add(jLast13);
+
+
+        // 主机负载
+        JLabel j620 = new JLabel("主机负载:", JLabel.RIGHT);
+
+        j620.setBounds(0, 130, 110, 30);
+        j621Text.setBounds(120, 130, 100, 30);
+        j622Text.setBounds(260, 130, 100, 30);
+        j623Text.setBounds(400, 130, 100, 30);
+
+        JLabel jLast21 = new JLabel("台", JLabel.CENTER);
+        JLabel jLast22 = new JLabel("台", JLabel.CENTER);
+        JLabel jLast23 = new JLabel("%", JLabel.CENTER);
+
+        jLast21.setBounds(180, 130, 100, 30);
+        jLast22.setBounds(320, 130, 100, 30);
+        jLast23.setBounds(460, 130, 100, 30);
+
+        p1.add(j620);
+        p1.add(j621Text);
+        p1.add(j622Text);
+        p1.add(j623Text);
+        p1.add(jLast21);
+        p1.add(jLast22);
+        p1.add(jLast23);
+
+        // 带宽
+        JLabel j630 = new JLabel("带宽:", JLabel.RIGHT);
+
+        j630.setBounds(0, 170, 110, 30);
+        j631Text.setBounds(120, 170, 100, 30);
+        j632Text.setBounds(260, 170, 100, 30);
+        j633Text.setBounds(400, 170, 100, 30);
+
+        JLabel jLast31 = new JLabel("GB", JLabel.CENTER);
+        JLabel jLast32 = new JLabel("GB", JLabel.CENTER);
+        JLabel jLast33 = new JLabel("%", JLabel.CENTER);
+
+        jLast31.setBounds(180, 170, 100, 30);
+        jLast32.setBounds(320, 170, 100, 30);
+        jLast33.setBounds(460, 170, 100, 30);
+
+        p1.add(j630);
+        p1.add(j631Text);
+        p1.add(j632Text);
+        p1.add(j633Text);
+        p1.add(jLast31);
+        p1.add(jLast32);
+        p1.add(jLast33);
+
+        // 内存
+        JLabel j640 = new JLabel("内存利用率:", JLabel.RIGHT);
+
+        j640.setBounds(0, 210, 110, 30);
+        j641Text.setBounds(120, 210, 100, 30);
+        j642Text.setBounds(260, 210, 100, 30);
+        j643Text.setBounds(400, 210, 100, 30);
+
+        JLabel jLast41 = new JLabel("%", JLabel.CENTER);
+        JLabel jLast42 = new JLabel("%", JLabel.CENTER);
+        JLabel jLast43 = new JLabel("%", JLabel.CENTER);
+
+        jLast41.setBounds(180, 210, 100, 30);
+        jLast42.setBounds(320, 210, 100, 30);
+        jLast43.setBounds(460, 210, 100, 30);
+
+        p1.add(j640);
+        p1.add(j641Text);
+        p1.add(j642Text);
+        p1.add(j643Text);
+        p1.add(jLast41);
+        p1.add(jLast42);
+        p1.add(jLast43);
+
+        return p1;
+    }
+
     public static void initAndResetSubJPanelData() {
         // p1
         j1Text.setText(InitialConstant.DATACENTER_NAME);
@@ -587,6 +723,23 @@ public class SubJPanelClass {
         j522Text.setSelectedIndex(InitialConstant.USR_CLOUDLET_TYPE[0][1]);
         j523Text.setSelectedIndex(InitialConstant.USR_CLOUDLET_TYPE[0][2]);
         j524Text.setSelectedIndex(InitialConstant.USR_CLOUDLET_TYPE[0][3]);
+
+        // p6
+        j611Text.setText(InitialConstant.BEST_CPU + "");
+        j612Text.setText(InitialConstant.WORST_CPU + "");
+        j613Text.setText(InitialConstant.WEIGHT_CPU + "");
+
+        j621Text.setText(InitialConstant.BEST_HOSTLOAD + "");
+        j622Text.setText(InitialConstant.WORST_HOSTLOAD + "");
+        j623Text.setText(InitialConstant.WEIGHT_HOSTLOAD + "");
+
+        j631Text.setText(InitialConstant.BEST_BANDWIDTH + "");
+        j632Text.setText(InitialConstant.WORST_BANDWIDTH + "");
+        j633Text.setText(InitialConstant.WEIGHT_BANDWIDTH + "");
+
+        j641Text.setText(InitialConstant.BEST_RAM + "");
+        j642Text.setText(InitialConstant.WORST_RAM + "");
+        j643Text.setText(InitialConstant.WEIGHT_RAM + "");
 
         //textArea
         GUI.setRightTextAreaClear();
@@ -680,7 +833,7 @@ public class SubJPanelClass {
 
     public static void setConstantParam() {
 
-        //p1
+        // p1
         Constant.DATACENTER_NAME = j1Text.getText();
         Constant.IT_ENERGYMODEL = j2Text.getText();
         Constant.SCHEDULING_INTERVAL = Double.valueOf(j3Text.getText());
@@ -714,7 +867,7 @@ public class SubJPanelClass {
         Constant.HOST_MAX_POWER[3] = Integer.valueOf(j244Text.getText());
         Constant.HOST_MAX_POWER[4] = Integer.valueOf(j245Text.getText());
 
-        //make the maximum power of one host
+        // make the maximum power of one host
         int MAXPOWER = 0;
         for(int host_max_power:Constant.HOST_MAX_POWER){
             if(MAXPOWER < host_max_power)
@@ -746,7 +899,7 @@ public class SubJPanelClass {
         Constant.VM_SIZE = Long.valueOf(j341Text.getText())*1000;
 
 
-        //p4
+        // p4
         Constant.CLOUDLET_LENGTH[0] = Long.valueOf(j411Text.getText());
         Constant.CLOUDLET_LENGTH[1] = Long.valueOf(j412Text.getText());
         Constant.CLOUDLET_LENGTH[2] = Long.valueOf(j413Text.getText());
@@ -762,7 +915,7 @@ public class SubJPanelClass {
         Constant.CLOUDLET_OUTPUTSIZE[2] = Integer.valueOf(j433Text.getText());
         Constant.CLOUDLET_OUTPUTSIZE[3] = Integer.valueOf(j434Text.getText());
 
-        //p5
+        // p5
         Constant.USR_VMNUM_OWNED[0][0] = Integer.valueOf(j511Text.getText());
         Constant.USR_VMNUM_OWNED[0][1] = Integer.valueOf(j512Text.getText());
         Constant.USR_VMNUM_OWNED[0][2] = Integer.valueOf(j513Text.getText());
@@ -772,6 +925,21 @@ public class SubJPanelClass {
         Constant.USR_CLOUDLET_TYPE[0][1] = Integer.valueOf((String) j522Text.getSelectedItem());
         Constant.USR_CLOUDLET_TYPE[0][2] = Integer.valueOf((String) j523Text.getSelectedItem());
         Constant.USR_CLOUDLET_TYPE[0][3] = Integer.valueOf((String) j524Text.getSelectedItem());
+
+        // p6
+        Constant.BEST_CPU = Integer.valueOf(j611Text.getText());
+        Constant.WORST_CPU = Integer.valueOf(j612Text.getText());
+        Constant.WEIGHT_CPU = Integer.valueOf(j613Text.getText());
+        Constant.BEST_HOSTLOAD = Integer.valueOf(j621Text.getText());
+        Constant.WORST_HOSTLOAD = Integer.valueOf(j622Text.getText());
+        Constant.WEIGHT_HOSTLOAD = Integer.valueOf(j623Text.getText());
+        Constant.BEST_BANDWIDTH = Integer.valueOf(j631Text.getText());
+        Constant.WORST_BANDWIDTH = Integer.valueOf(j632Text.getText());
+        Constant.WEIGHT_BANDWIDTH = Integer.valueOf(j633Text.getText());
+        Constant.BEST_RAM = Integer.valueOf(j641Text.getText());
+        Constant.WORST_RAM = Integer.valueOf(j642Text.getText());
+        Constant.WEIGHT_RAM  = Integer.valueOf(j643Text.getText());
+
         //右侧文本框
         GUI.logTextArea.setText("");
     }

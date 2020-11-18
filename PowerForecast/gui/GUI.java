@@ -21,7 +21,7 @@ import java.io.IOException;
 
 public class GUI {
 
-    public static String titlename = "CloudSimSEC";
+    public static String titlename = "边缘计算服务器集群能耗和评估模拟平台";
     public static int frameWidth = 1000;
     public static int frameHeight = 600;
     public static int lowerPanelHeight = 70;
@@ -32,12 +32,15 @@ public class GUI {
     public static JTextArea logTextArea = new JTextArea();
     public static JScrollPane logScroll = new JScrollPane(logTextArea);
 
+    // p1 数据中心
     public static String DATACENTER_NAME;
     public static String IT_ENERGYMODEL;
     public static double SCHEDULING_INTERVAL;
     public static String ITENVIRONMENT_ENERGYMODEL;
     public static double FIREENERGY;
     public static double INFRASTRUCTUREENERGY;
+
+    // p2 物理主机
     public static int[] VM_HOST_NUMBERS;
     public static int[] HOST_MIPS;
     public static int[] HOST_MIN_POWER;
@@ -45,16 +48,36 @@ public class GUI {
     public static int[] HOST_RAM;
     public static long HOST_BW;
     public static long HOST_STORAGE;
+
+    // p3 虚拟机
     public static int[] VM_MIPS;
     public static int[] VM_RAM;
     public static long VM_BW;
     public static long VM_SIZE;
+
+    // p4 云任务
     public static long[] CLOUDLET_LENGTH;
     public static int[] CLOUDLET_FILESIZE;
     public static int[] CLOUDLET_OUTPUTSIZE;
+
+    // p5 用户
     public static int[][] USR_TYPE_OWNED;
     public static int[][] USR_VMNUM_OWNED;
     public static int[][] USR_CLOUDLET_TYPE;
+
+    // p6 QoS评估
+    public static int BEST_CPU;
+    public static int WORST_CPU;
+    public static int WEIGHT_CPU;
+    public static int BEST_HOSTLOAD;
+    public static int WORST_HOSTLOAD;
+    public static int WEIGHT_HOSTLOAD;
+    public static int BEST_BANDWIDTH;
+    public static int WORST_BANDWIDTH;
+    public static int WEIGHT_BANDWIDTH;
+    public static int BEST_RAM;
+    public static int WORST_RAM;
+    public static int WEIGHT_RAM;
 
     public static ProgressBarThread t;
 
@@ -187,11 +210,14 @@ public class GUI {
         tp.add(SubJPanelClass.getVMPanel());
         tp.add(SubJPanelClass.getCloudTaskPanel());
         tp.add(SubJPanelClass.getUserPanel());
+        tp.add(SubJPanelClass.getQoSPanel());
+
         tp.setTitleAt(0, "数据中心");
         tp.setTitleAt(1, "物理主机");
         tp.setTitleAt(2, "虚拟机");
         tp.setTitleAt(3, "云任务");
         tp.setTitleAt(4, "用户");
+        tp.setTitleAt(5, "QoS评估");
 
         return tp;
     }
@@ -423,6 +449,7 @@ public class GUI {
     }
 
     private static void initDefaultData() {
+        // p1
         DATACENTER_NAME = Constant.DATACENTER_NAME;
         IT_ENERGYMODEL = Constant.IT_ENERGYMODEL;
         SCHEDULING_INTERVAL = Constant.SCHEDULING_INTERVAL;
@@ -430,6 +457,7 @@ public class GUI {
         FIREENERGY = Constant.FIREENERGY;
         INFRASTRUCTUREENERGY = Constant.INFRASTRUCTUREENERGY;
 
+        // p2
         VM_HOST_NUMBERS = Constant.VM_HOST_NUMBERS;
         HOST_MIPS = Constant.HOST_MIPS;
         HOST_MIN_POWER = Constant.HOST_MIN_POWER;
@@ -437,16 +465,36 @@ public class GUI {
         HOST_RAM = Constant.HOST_RAM;
         HOST_BW = Constant.HOST_BW;
         HOST_STORAGE = Constant.HOST_STORAGE;
+
+        // p3
         VM_MIPS = Constant.VM_MIPS;
         VM_RAM = Constant.VM_RAM;
         VM_BW = Constant.VM_BW;
         VM_SIZE = Constant.VM_SIZE;
+
+        // p4
         CLOUDLET_LENGTH = Constant.CLOUDLET_LENGTH;
         CLOUDLET_FILESIZE = Constant.CLOUDLET_FILESIZE;
         CLOUDLET_OUTPUTSIZE = Constant.CLOUDLET_OUTPUTSIZE;
+
+        // p5
         USR_TYPE_OWNED = Constant.USR_TYPE_OWNED;
         USR_VMNUM_OWNED = Constant.USR_VMNUM_OWNED;
         USR_CLOUDLET_TYPE = Constant.USR_CLOUDLET_TYPE;
+
+        // p6
+        BEST_CPU = Constant.BEST_CPU;
+        WORST_CPU = Constant.WORST_CPU;
+        WEIGHT_CPU = Constant.WEIGHT_CPU;
+        BEST_HOSTLOAD = Constant.BEST_HOSTLOAD;
+        WORST_HOSTLOAD = Constant.WORST_HOSTLOAD;
+        WEIGHT_HOSTLOAD = Constant.WEIGHT_HOSTLOAD;
+        BEST_BANDWIDTH = Constant.BEST_BANDWIDTH;
+        WORST_BANDWIDTH = Constant.WORST_BANDWIDTH;
+        WEIGHT_BANDWIDTH = Constant.WEIGHT_BANDWIDTH;
+        BEST_RAM = Constant.BEST_RAM;
+        WORST_RAM = Constant.WORST_RAM;
+        WEIGHT_RAM = Constant.WEIGHT_RAM;
 
         for(int tempNumber:VM_HOST_NUMBERS){
             Constant.NUMBER_HOST += tempNumber;

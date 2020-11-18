@@ -1,5 +1,7 @@
 package structure;
 
+import java.util.ArrayList;
+
 /**
  * This file is aim to store the constants which are used.
  *
@@ -98,5 +100,31 @@ public class InitialConstant {
 	public static int[] VM_RAM = { 512, 512, 1024, 1024 };
 	public static long VM_BW = 1000;
 	public static long VM_SIZE = 25000; // 25 GB
+
+	// ================== Powers Result after Computing =================//
+
+	public static ArrayList<Double> RRList;
+
+	// ================== 基于QoS感知区域的评估参数 =================//
+
+	// cpu 范围 0% - 100%
+	public static int BEST_CPU = 0;
+	public static int WORST_CPU = 100;
+	public static int WEIGHT_CPU = 50;
+
+	// 主机负载 范围 0台 - 50台
+	public static int BEST_HOSTLOAD = 0;
+	public static int WORST_HOSTLOAD = 50;
+	public static int WEIGHT_HOSTLOAD = 50;
+
+	// 带宽 范围 10GB - 1GB
+	public static int BEST_BANDWIDTH = 10;
+	public static int WORST_BANDWIDTH = 1;
+	public static int WEIGHT_BANDWIDTH = 0;
+
+	// 内存 范围 0% - 100%
+	public static int BEST_RAM = 0;
+	public static int WORST_RAM = 100;
+	public static int WEIGHT_RAM = 0;
 
 }
