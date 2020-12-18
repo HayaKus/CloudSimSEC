@@ -31,7 +31,13 @@ If you found it helpful to you, please give me a star and recommend it to your f
 	- [Contributors 贡献者](#contributors-贡献者)
 - [License 使用许可](#license-使用许可)
 
-## Update 更新  
+## Update 更新 （建议使用分支“qosEvaluation”中的版本） 
+### 2020.12.18 重写分支qosEvaluation的用户界面
+- CloudSimSEC的中文名称修改为“边缘计算服务器集群能耗和评估模拟平台”
+- 重写了CloudSimSEC的用户界面（原来黑色的那个被吐槽太丑了 XD）
+
+<div align=center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/usage/CloudSimSEC%E9%A6%96%E9%A1%B5.png" width="100%"/></div>
+
 ### 2020.11.18 新建分支qosEvaluation
 - 初始页面新增“QoS评估”页面，可以设置基于QoS感知区域评估的相关参数
 - 结果页面的“首页”页面中新增“基于QoS感知区域评估的相关参数”一栏
@@ -70,8 +76,8 @@ CloudSimSEC is an extension of Cloudsim specifically designed to simulate the en
 
 ## Download/Install 下载/安装
 
-Download install pack (539MB): [CloudSimSEC__setup.exe](https://twocups.cn/download/CloudSimSEC__setup.exe)  
-**下载安装包（539MB）：[CloudSimSEC__setup.exe](https://twocups.cn/download/CloudSimSEC__setup.exe)**
+Download install pack (539MB): [CloudSimSEC__setup.exe](https://twocups.cn/download/CloudSimSEC__setup.exe) (Note: This is the installation package of the branch 'master'.)  
+**下载安装包（539MB）：[CloudSimSEC__setup.exe](https://twocups.cn/download/CloudSimSEC__setup.exe)**（务必注意：这是主分支的安装包）
 
 Note: Do not install this software in the "C://", otherwise there will be a problem that the user does not have permission to open this software.  
 **注意：不要把这个软件安装在C盘，否则会出现用户没有权限打开软件的问题。**  

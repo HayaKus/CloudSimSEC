@@ -127,23 +127,23 @@ public class SubJPanelClass {
         JButton openFile = new JButton("浏览文件");
         JButton openFile2 = new JButton("浏览文件");
 
-        j1.setBounds(58, 50, 100, 30);
-        j2.setBounds(48, 100, 120, 30);
-        j3.setBounds(60, 350, 100, 30);
-        j4.setBounds(25, 150, 130, 30);
-        j5.setBounds(37, 250, 130, 30);
-        j6.setBounds(11, 300, 150, 30);
-        j7.setBounds(5, 200, 150, 30);
-        j1Text.setBounds(140, 50, 280, 30);
-        j2Text.setBounds(140, 100, 280, 30);
-        openFile.setBounds(420, 100, 70, 30);
-        j3Text.setBounds(140, 350, 280, 30);
+        j1.setBounds(150, 50, 100, 30);
+        j2.setBounds(140, 100, 120, 30);
+        j3.setBounds(160, 350, 100, 30);
+        j4.setBounds(115, 150, 130, 30);
+        j5.setBounds(135, 250, 130, 30);
+        j6.setBounds(111, 300, 150, 30);
+        j7.setBounds(100, 200, 150, 30);
+        j1Text.setBounds(240, 50, 280, 30);
+        j2Text.setBounds(240, 100, 280, 30);
+        openFile.setBounds(525, 100, 70, 30);
+        j3Text.setBounds(240, 350, 280, 30);
         j3Text.setEditable(false);
-        j4Text.setBounds(140, 150, 280, 30);
-        openFile2.setBounds(420, 150, 70, 30);
-        j5Text.setBounds(140, 250, 280, 30);
-        j6Text.setBounds(140, 300, 280, 30);
-        j7Text.setBounds(140, 200, 280, 30);
+        j4Text.setBounds(240, 150, 280, 30);
+        openFile2.setBounds(525, 150, 70, 30);
+        j5Text.setBounds(240, 250, 280, 30);
+        j6Text.setBounds(240, 300, 280, 30);
+        j7Text.setBounds(240, 200, 280, 30);
 
         JFileChooser fc = new JFileChooser();
         openFile.addActionListener(new ActionListener() {
@@ -197,17 +197,17 @@ public class SubJPanelClass {
 
         p1.setLayout(null);
         // 主机名
-        JLabel j1 = new JLabel("主机0", JLabel.CENTER);
-        JLabel j2 = new JLabel("主机1", JLabel.CENTER);
-        JLabel j3 = new JLabel("主机2", JLabel.CENTER);
-        JLabel j4 = new JLabel("主机3", JLabel.CENTER);
-        JLabel j5 = new JLabel("主机4", JLabel.CENTER);
+        JLabel j1 = new JLabel("第 0 类服务器", JLabel.CENTER);
+        JLabel j2 = new JLabel("第 1 类服务器", JLabel.CENTER);
+        JLabel j3 = new JLabel("第 2 类服务器", JLabel.CENTER);
+        JLabel j4 = new JLabel("第 3 类服务器", JLabel.CENTER);
+        JLabel j5 = new JLabel("第 4 类服务器", JLabel.CENTER);
 
-        j1.setBounds(100, 50, 100, 30);
-        j2.setBounds(200, 50, 100, 30);
-        j3.setBounds(300, 50, 100, 30);
-        j4.setBounds(400, 50, 100, 30);
-        j5.setBounds(500, 50, 100, 30);
+        j1.setBounds(105, 50, 100, 30);
+        j2.setBounds(205, 50, 100, 30);
+        j3.setBounds(305, 50, 100, 30);
+        j4.setBounds(405, 50, 100, 30);
+        j5.setBounds(505, 50, 100, 30);
         p1.add(j1);
         p1.add(j2);
         p1.add(j3);
@@ -218,11 +218,11 @@ public class SubJPanelClass {
         JLabel j210 = new JLabel("数量:", JLabel.RIGHT);
 
         j210.setBounds(0, 90, 100, 30);
-        j211Text.setBounds(100, 90, 100, 30);
-        j212Text.setBounds(200, 90, 100, 30);
-        j213Text.setBounds(300, 90, 100, 30);
-        j214Text.setBounds(400, 90, 100, 30);
-        j215Text.setBounds(500, 90, 100, 30);
+        j211Text.setBounds(110, 90, 90, 30);
+        j212Text.setBounds(210, 90, 90, 30);
+        j213Text.setBounds(310, 90, 90, 30);
+        j214Text.setBounds(410, 90, 90, 30);
+        j215Text.setBounds(510, 90, 90, 30);
 
         p1.add(j210);
         p1.add(j211Text);
@@ -235,11 +235,11 @@ public class SubJPanelClass {
         JLabel j220 = new JLabel("运算能力(MIPS):", JLabel.RIGHT);
 
         j220.setBounds(0, 130, 100, 30);
-        j221Text.setBounds(100, 130, 100, 30);
-        j222Text.setBounds(200, 130, 100, 30);
-        j223Text.setBounds(300, 130, 100, 30);
-        j224Text.setBounds(400, 130, 100, 30);
-        j225Text.setBounds(500, 130, 100, 30);
+        j221Text.setBounds(110, 130, 90, 30);
+        j222Text.setBounds(210, 130, 90, 30);
+        j223Text.setBounds(310, 130, 90, 30);
+        j224Text.setBounds(410, 130, 90, 30);
+        j225Text.setBounds(510, 130, 90, 30);
 
         p1.add(j220);
         p1.add(j221Text);
@@ -251,11 +251,11 @@ public class SubJPanelClass {
         JLabel j230 = new JLabel("空闲功耗(W):", JLabel.RIGHT);
 
         j230.setBounds(0, 170, 100, 30);
-        j231Text.setBounds(100, 170, 100, 30);
-        j232Text.setBounds(200, 170, 100, 30);
-        j233Text.setBounds(300, 170, 100, 30);
-        j234Text.setBounds(400, 170, 100, 30);
-        j235Text.setBounds(500, 170, 100, 30);
+        j231Text.setBounds(110, 170, 90, 30);
+        j232Text.setBounds(210, 170, 90, 30);
+        j233Text.setBounds(310, 170, 90, 30);
+        j234Text.setBounds(410, 170, 90, 30);
+        j235Text.setBounds(510, 170, 90, 30);
 
         p1.add(j230);
         p1.add(j231Text);
@@ -268,11 +268,11 @@ public class SubJPanelClass {
         JLabel j240 = new JLabel("最大功耗(W):", JLabel.RIGHT);
 
         j240.setBounds(0, 210, 100, 30);
-        j241Text.setBounds(100, 210, 100, 30);
-        j242Text.setBounds(200, 210, 100, 30);
-        j243Text.setBounds(300, 210, 100, 30);
-        j244Text.setBounds(400, 210, 100, 30);
-        j245Text.setBounds(500, 210, 100, 30);
+        j241Text.setBounds(110, 210, 90, 30);
+        j242Text.setBounds(210, 210, 90, 30);
+        j243Text.setBounds(310, 210, 90, 30);
+        j244Text.setBounds(410, 210, 90, 30);
+        j245Text.setBounds(510, 210, 90, 30);
 
         p1.add(j240);
         p1.add(j241Text);
@@ -285,11 +285,11 @@ public class SubJPanelClass {
         JLabel j250 = new JLabel("内存(MB):", JLabel.RIGHT);
 
         j250.setBounds(0, 250, 100, 30);
-        j251Text.setBounds(100, 250, 100, 30);
-        j252Text.setBounds(200, 250, 100, 30);
-        j253Text.setBounds(300, 250, 100, 30);
-        j254Text.setBounds(400, 250, 100, 30);
-        j255Text.setBounds(500, 250, 100, 30);
+        j251Text.setBounds(110, 250, 90, 30);
+        j252Text.setBounds(210, 250, 90, 30);
+        j253Text.setBounds(310, 250, 90, 30);
+        j254Text.setBounds(410, 250, 90, 30);
+        j255Text.setBounds(510, 250, 90, 30);
 
         p1.add(j250);
         p1.add(j251Text);
@@ -302,7 +302,7 @@ public class SubJPanelClass {
         JLabel j260 = new JLabel("带宽(bit/s):", JLabel.RIGHT);
 
         j260.setBounds(0, 300, 100, 30);
-        j261Text.setBounds(100, 300, 100, 30);
+        j261Text.setBounds(110, 300, 90, 30);
 
         p1.add(j260);
         p1.add(j261Text);
@@ -311,7 +311,7 @@ public class SubJPanelClass {
         JLabel j270 = new JLabel("存储(GB):", JLabel.RIGHT);
 
         j270.setBounds(0, 350, 100, 30);
-        j271Text.setBounds(100, 350, 100, 30);
+        j271Text.setBounds(110, 350, 90, 30);
 
         p1.add(j270);
         p1.add(j271Text);
@@ -331,10 +331,10 @@ public class SubJPanelClass {
         JLabel j3 = new JLabel("虚拟机2", JLabel.CENTER);
         JLabel j4 = new JLabel("虚拟机3", JLabel.CENTER);
 
-        j1.setBounds(100, 50, 100, 30);
-        j2.setBounds(200, 50, 100, 30);
-        j3.setBounds(300, 50, 100, 30);
-        j4.setBounds(400, 50, 100, 30);
+        j1.setBounds(155, 50, 100, 30);
+        j2.setBounds(255, 50, 100, 30);
+        j3.setBounds(355, 50, 100, 30);
+        j4.setBounds(455, 50, 100, 30);
         p1.add(j1);
         p1.add(j2);
         p1.add(j3);
@@ -342,11 +342,11 @@ public class SubJPanelClass {
         // 运算能力
         JLabel j310 = new JLabel("运算能力(MIPS):", JLabel.RIGHT);
 
-        j310.setBounds(0, 90, 100, 30);
-        j311Text.setBounds(100, 90, 100, 30);
-        j312Text.setBounds(200, 90, 100, 30);
-        j313Text.setBounds(300, 90, 100, 30);
-        j314Text.setBounds(400, 90, 100, 30);
+        j310.setBounds(40, 90, 100, 30);
+        j311Text.setBounds(160, 90, 90, 30);
+        j312Text.setBounds(260, 90, 90, 30);
+        j313Text.setBounds(360, 90, 90, 30);
+        j314Text.setBounds(460, 90, 90, 30);
 
         p1.add(j310);
         p1.add(j311Text);
@@ -357,11 +357,11 @@ public class SubJPanelClass {
         // 内存
         JLabel j320 = new JLabel("内存(MB):", JLabel.RIGHT);
 
-        j320.setBounds(0, 130, 100, 30);
-        j321Text.setBounds(100, 130, 100, 30);
-        j322Text.setBounds(200, 130, 100, 30);
-        j323Text.setBounds(300, 130, 100, 30);
-        j324Text.setBounds(400, 130, 100, 30);
+        j320.setBounds(40, 130, 100, 30);
+        j321Text.setBounds(160, 130, 90, 30);
+        j322Text.setBounds(260, 130, 90, 30);
+        j323Text.setBounds(360, 130, 90, 30);
+        j324Text.setBounds(460, 130, 90, 30);
 
         p1.add(j320);
         p1.add(j321Text);
@@ -372,8 +372,8 @@ public class SubJPanelClass {
         // 带宽
         JLabel j330 = new JLabel("带宽(bit/s):", JLabel.RIGHT);
 
-        j330.setBounds(0, 170, 100, 30);
-        j331Text.setBounds(100, 170, 100, 30);
+        j330.setBounds(40, 170, 100, 30);
+        j331Text.setBounds(160, 170, 90, 30);
 
         p1.add(j330);
         p1.add(j331Text);
@@ -381,8 +381,8 @@ public class SubJPanelClass {
         // 存储
         JLabel j340 = new JLabel("存储(GB):", JLabel.RIGHT);
 
-        j340.setBounds(0, 210, 100, 30);
-        j341Text.setBounds(100, 210, 100, 30);
+        j340.setBounds(40, 210, 100, 30);
+        j341Text.setBounds(160, 210, 90, 30);
 
         p1.add(j340);
         p1.add(j341Text);
@@ -401,10 +401,10 @@ public class SubJPanelClass {
         JLabel j3 = new JLabel("云任务2", JLabel.CENTER);
         JLabel j4 = new JLabel("云任务3", JLabel.CENTER);
 
-        j1.setBounds(110, 50, 100, 30);
-        j2.setBounds(210, 50, 100, 30);
-        j3.setBounds(310, 50, 100, 30);
-        j4.setBounds(410, 50, 100, 30);
+        j1.setBounds(155, 50, 100, 30);
+        j2.setBounds(255, 50, 100, 30);
+        j3.setBounds(355, 50, 100, 30);
+        j4.setBounds(455, 50, 100, 30);
         p1.add(j1);
         p1.add(j2);
         p1.add(j3);
@@ -413,11 +413,11 @@ public class SubJPanelClass {
         JLabel j410 = new JLabel("云任务量(MI):", JLabel.RIGHT);
 
 
-        j410.setBounds(0, 90, 110, 30);
-        j411Text.setBounds(110, 90, 100, 30);
-        j412Text.setBounds(210, 90, 100, 30);
-        j413Text.setBounds(310, 90, 100, 30);
-        j414Text.setBounds(410, 90, 100, 30);
+        j410.setBounds(40, 90, 110, 30);
+        j411Text.setBounds(160, 90, 90, 30);
+        j412Text.setBounds(260, 90, 90, 30);
+        j413Text.setBounds(360, 90, 90, 30);
+        j414Text.setBounds(460, 90, 90, 30);
 
         p1.add(j410);
         p1.add(j411Text);
@@ -429,11 +429,11 @@ public class SubJPanelClass {
         JLabel j420 = new JLabel("文件数量:", JLabel.RIGHT);
 
 
-        j420.setBounds(0, 130, 110, 30);
-        j421Text.setBounds(110, 130, 100, 30);
-        j422Text.setBounds(210, 130, 100, 30);
-        j423Text.setBounds(310, 130, 100, 30);
-        j424Text.setBounds(410, 130, 100, 30);
+        j420.setBounds(40, 130, 110, 30);
+        j421Text.setBounds(160, 130, 90, 30);
+        j422Text.setBounds(260, 130, 90, 30);
+        j423Text.setBounds(360, 130, 90, 30);
+        j424Text.setBounds(460, 130, 90, 30);
 
         p1.add(j420);
         p1.add(j421Text);
@@ -445,11 +445,11 @@ public class SubJPanelClass {
         JLabel j430 = new JLabel("输出文件数量:", JLabel.RIGHT);
 
 
-        j430.setBounds(0, 170, 110, 30);
-        j431Text.setBounds(110, 170, 100, 30);
-        j432Text.setBounds(210, 170, 100, 30);
-        j433Text.setBounds(310, 170, 100, 30);
-        j434Text.setBounds(410, 170, 100, 30);
+        j430.setBounds(40, 170, 110, 30);
+        j431Text.setBounds(160, 170, 90, 30);
+        j432Text.setBounds(260, 170, 90, 30);
+        j433Text.setBounds(360, 170, 90, 30);
+        j434Text.setBounds(460, 170, 90, 30);
 
         p1.add(j430);
         p1.add(j431Text);
@@ -466,10 +466,10 @@ public class SubJPanelClass {
         p1.setLayout(null);
 
         JLabel userCount = new JLabel("用户数量:", JLabel.RIGHT);
-        userCount.setBounds(0, 10, 110, 30);
+        userCount.setBounds(40, 10, 110, 30);
         JTextField userCountText = new JTextField("1");
         userCountText.setEditable(false);
-        userCountText.setBounds(110, 10, 280, 30);
+        userCountText.setBounds(170, 10, 280, 30);
         p1.add(userCount);
         p1.add(userCountText);
 
@@ -479,10 +479,10 @@ public class SubJPanelClass {
         JLabel j3 = new JLabel("虚拟机2", JLabel.CENTER);
         JLabel j4 = new JLabel("虚拟机3", JLabel.CENTER);
 
-        j1.setBounds(100, 50, 100, 30);
-        j2.setBounds(200, 50, 100, 30);
-        j3.setBounds(300, 50, 100, 30);
-        j4.setBounds(400, 50, 100, 30);
+        j1.setBounds(155, 50, 100, 30);
+        j2.setBounds(255, 50, 100, 30);
+        j3.setBounds(355, 50, 100, 30);
+        j4.setBounds(455, 50, 100, 30);
         p1.add(j1);
         p1.add(j2);
         p1.add(j3);
@@ -491,11 +491,11 @@ public class SubJPanelClass {
         // 虚拟机数量
         JLabel j510 = new JLabel("虚拟机数量:", JLabel.RIGHT);
 
-        j510.setBounds(0, 90, 110, 30);
-        j511Text.setBounds(110, 90, 100, 30);
-        j512Text.setBounds(210, 90, 100, 30);
-        j513Text.setBounds(310, 90, 100, 30);
-        j514Text.setBounds(410, 90, 100, 30);
+        j510.setBounds(40, 90, 110, 30);
+        j511Text.setBounds(160, 90, 90, 30);
+        j512Text.setBounds(260, 90, 90, 30);
+        j513Text.setBounds(360, 90, 90, 30);
+        j514Text.setBounds(460, 90, 90, 30);
 
         p1.add(j510);
         p1.add(j511Text);
@@ -506,11 +506,11 @@ public class SubJPanelClass {
         JLabel j520 = new JLabel("云任务种类(名称):", JLabel.RIGHT);
 
 
-        j520.setBounds(0, 130, 110, 30);
-        j521Text.setBounds(110, 130, 100, 30);
-        j522Text.setBounds(210, 130, 100, 30);
-        j523Text.setBounds(310, 130, 100, 30);
-        j524Text.setBounds(410, 130, 100, 30);
+        j520.setBounds(40, 130, 110, 30);
+        j521Text.setBounds(160, 130, 90, 30);
+        j522Text.setBounds(260, 130, 90, 30);
+        j523Text.setBounds(360, 130, 90, 30);
+        j524Text.setBounds(460, 130, 90, 30);
 
         p1.add(j520);
         p1.add(j521Text);
@@ -532,9 +532,9 @@ public class SubJPanelClass {
         JLabel j2 = new JLabel("最差值", JLabel.CENTER);
         JLabel j3 = new JLabel("权重", JLabel.CENTER);
 
-        j1.setBounds(120, 50, 100, 30);
-        j2.setBounds(260, 50, 100, 30);
-        j3.setBounds(400, 50, 100, 30);
+        j1.setBounds(190, 50, 100, 30);
+        j2.setBounds(330, 50, 100, 30);
+        j3.setBounds(470, 50, 100, 30);
 
         p1.add(j1);
         p1.add(j2);
@@ -543,18 +543,18 @@ public class SubJPanelClass {
         // cpu
         JLabel j610 = new JLabel("CPU利用率:", JLabel.RIGHT);
 
-        j610.setBounds(0, 90, 110, 30);
-        j611Text.setBounds(120, 90, 100, 30);
-        j612Text.setBounds(260, 90, 100, 30);
-        j613Text.setBounds(400, 90, 100, 30);
+        j610.setBounds(65, 90, 110, 30);
+        j611Text.setBounds(190, 90, 100, 30);
+        j612Text.setBounds(330, 90, 100, 30);
+        j613Text.setBounds(470, 90, 100, 30);
 
         JLabel jLast11 = new JLabel("%", JLabel.CENTER);
         JLabel jLast12 = new JLabel("%", JLabel.CENTER);
         JLabel jLast13 = new JLabel("%", JLabel.CENTER);
 
-        jLast11.setBounds(180, 90, 100, 30);
-        jLast12.setBounds(320, 90, 100, 30);
-        jLast13.setBounds(460, 90, 100, 30);
+        jLast11.setBounds(250, 90, 100, 30);
+        jLast12.setBounds(390, 90, 100, 30);
+        jLast13.setBounds(530, 90, 100, 30);
 
         p1.add(j610);
         p1.add(j611Text);
@@ -568,18 +568,18 @@ public class SubJPanelClass {
         // 主机负载
         JLabel j620 = new JLabel("主机负载:", JLabel.RIGHT);
 
-        j620.setBounds(0, 130, 110, 30);
-        j621Text.setBounds(120, 130, 100, 30);
-        j622Text.setBounds(260, 130, 100, 30);
-        j623Text.setBounds(400, 130, 100, 30);
+        j620.setBounds(65, 130, 110, 30);
+        j621Text.setBounds(190, 130, 100, 30);
+        j622Text.setBounds(330, 130, 100, 30);
+        j623Text.setBounds(470, 130, 100, 30);
 
         JLabel jLast21 = new JLabel("台", JLabel.CENTER);
         JLabel jLast22 = new JLabel("台", JLabel.CENTER);
         JLabel jLast23 = new JLabel("%", JLabel.CENTER);
 
-        jLast21.setBounds(180, 130, 100, 30);
-        jLast22.setBounds(320, 130, 100, 30);
-        jLast23.setBounds(460, 130, 100, 30);
+        jLast21.setBounds(250, 130, 100, 30);
+        jLast22.setBounds(390, 130, 100, 30);
+        jLast23.setBounds(530, 130, 100, 30);
 
         p1.add(j620);
         p1.add(j621Text);
@@ -592,18 +592,18 @@ public class SubJPanelClass {
         // 带宽
         JLabel j630 = new JLabel("带宽:", JLabel.RIGHT);
 
-        j630.setBounds(0, 170, 110, 30);
-        j631Text.setBounds(120, 170, 100, 30);
-        j632Text.setBounds(260, 170, 100, 30);
-        j633Text.setBounds(400, 170, 100, 30);
+        j630.setBounds(65, 170, 110, 30);
+        j631Text.setBounds(190, 170, 100, 30);
+        j632Text.setBounds(330, 170, 100, 30);
+        j633Text.setBounds(470, 170, 100, 30);
 
         JLabel jLast31 = new JLabel("GB", JLabel.CENTER);
         JLabel jLast32 = new JLabel("GB", JLabel.CENTER);
         JLabel jLast33 = new JLabel("%", JLabel.CENTER);
 
-        jLast31.setBounds(180, 170, 100, 30);
-        jLast32.setBounds(320, 170, 100, 30);
-        jLast33.setBounds(460, 170, 100, 30);
+        jLast31.setBounds(250, 170, 100, 30);
+        jLast32.setBounds(390, 170, 100, 30);
+        jLast33.setBounds(530, 170, 100, 30);
 
         p1.add(j630);
         p1.add(j631Text);
@@ -616,18 +616,18 @@ public class SubJPanelClass {
         // 内存
         JLabel j640 = new JLabel("内存利用率:", JLabel.RIGHT);
 
-        j640.setBounds(0, 210, 110, 30);
-        j641Text.setBounds(120, 210, 100, 30);
-        j642Text.setBounds(260, 210, 100, 30);
-        j643Text.setBounds(400, 210, 100, 30);
+        j640.setBounds(65, 210, 110, 30);
+        j641Text.setBounds(190, 210, 100, 30);
+        j642Text.setBounds(330, 210, 100, 30);
+        j643Text.setBounds(470, 210, 100, 30);
 
         JLabel jLast41 = new JLabel("%", JLabel.CENTER);
         JLabel jLast42 = new JLabel("%", JLabel.CENTER);
         JLabel jLast43 = new JLabel("%", JLabel.CENTER);
 
-        jLast41.setBounds(180, 210, 100, 30);
-        jLast42.setBounds(320, 210, 100, 30);
-        jLast43.setBounds(460, 210, 100, 30);
+        jLast41.setBounds(250, 210, 100, 30);
+        jLast42.setBounds(390, 210, 100, 30);
+        jLast43.setBounds(530, 210, 100, 30);
 
         p1.add(j640);
         p1.add(j641Text);

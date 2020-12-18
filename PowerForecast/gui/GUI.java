@@ -5,6 +5,7 @@
 
 package gui;
 
+import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 import structure.Constant;
 
 import javax.swing.*;
@@ -40,7 +41,7 @@ public class GUI {
     public static double FIREENERGY;
     public static double INFRASTRUCTUREENERGY;
 
-    // p2 物理主机
+    // p2 物理服务器
     public static int[] VM_HOST_NUMBERS;
     public static int[] HOST_MIPS;
     public static int[] HOST_MIN_POWER;
@@ -96,7 +97,15 @@ public class GUI {
         frame = setIcon(frame);
 
         frame.setLayout(new BorderLayout());
-        JPanel upperPanel = new JPanel();
+
+        // 设置最上面的面板
+        Image image = new ImageIcon("graphs/logo/upperPanelImage.png").getImage();
+        BackgroundPanel upperPanel = new BackgroundPanel(image);
+
+        // upperPanel右对齐
+        upperPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+        upperPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
+
         upperPanel.setPreferredSize(new Dimension(frameWidth, upperPanelHeight));
         JTabbedPane middlepanel = getTabbedPane();
 
@@ -161,6 +170,7 @@ public class GUI {
                 }
             }
         });
+
         //b3
         b3.addActionListener(new ActionListener() {
             @Override
@@ -191,10 +201,15 @@ public class GUI {
         frame.add(getLowerPanel(), BorderLayout.SOUTH);
 
         frame.setDefaultCloseOperation(3);
+
+        // 调置窗体背景全透明并完全隐藏一个窗体的标题栏
+//        frame.setUndecorated(true);
+//        AWTUtilities.setWindowOpaque(frame, false);
+//        frame.getRootPane().setWindowDecorationStyle(JRootPane.NONE);
+
         frame.setVisible(true);
 
         SubJPanelClass.initAndResetSubJPanelData();
-
 
     }
 
@@ -213,7 +228,7 @@ public class GUI {
         tp.add(SubJPanelClass.getQoSPanel());
 
         tp.setTitleAt(0, "数据中心");
-        tp.setTitleAt(1, "物理主机");
+        tp.setTitleAt(1, "物理服务器");
         tp.setTitleAt(2, "虚拟机");
         tp.setTitleAt(3, "云任务");
         tp.setTitleAt(4, "用户");
@@ -254,6 +269,9 @@ public class GUI {
         JButton resetBtn = new JButton("重置");
         JPanel blankBtn = new JPanel();
         blankBtn.setPreferredSize(new Dimension(10, 30));
+        // 可以修改按钮颜色
+//        clearBtn.setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.lightBlue));
+//        resetBtn.setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.lightBlue));
         leftBtn.add(clearBtn, BorderLayout.WEST);
         leftBtn.add(resetBtn, BorderLayout.EAST);
         leftBtn.add(blankBtn, BorderLayout.CENTER);
@@ -271,6 +289,8 @@ public class GUI {
         outsideProgressBar.add(progressBar);
         center.add(outsideProgressBar, BorderLayout.CENTER);
         JButton resultBtn = new JButton("生成结果");
+        // 可以修改按钮颜色
+//        resultBtn.setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.red));
         center.add(resultBtn, BorderLayout.EAST);
 
         clearBtn.addMouseListener(new MouseListener() {
@@ -617,22 +637,42 @@ public class GUI {
 
     private static void setLookAndFeel() {
         try {
-            // 1.黑色风格
-            javax.swing.UIManager.setLookAndFeel("org.jvnet.substance.skin.SubstanceRavenGraphiteGlassLookAndFeel");
+
+            /* 定义窗口边框类型 */
+            // 使用不透明的普通边框（这是本LNF在Java1.5版默认使用的样式，因为java1.5不支持窗口透明）
+            BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.generalNoTranslucencyShadow;
+            // 使用本地系统的窗口装饰样式（本样式将能带来最佳性能，使用操作系统默认窗口样式
+//            BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.osLookAndFeelDecorated;
+            // 使用类似于MacOSX的强烈立体感半透明阴影边框（本样式性能尚可，视觉效果最佳）
+//            BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencyAppleLike;
+            // 使用不太强烈立体感半透明阴影边框（本样式性能尚可，视觉效果较soft）
+//            BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencySmallShadow;
+
+
+            // 使用使用BeautyEye L&F（外部包beautyeye_lnf.jar）来渲染整个界面
+            org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
+
+            /* swing原生风格 */
+//            // 1.黑色风格
+//            javax.swing.UIManager.setLookAndFeel("org.jvnet.substance.skin.SubstanceRavenGraphiteGlassLookAndFeel");
 //            // 2.Windows风格
 //            javax.swing.UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 //            // 3.Windows经典风格
 //            javax.swing.UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
 //            // 4.Motif风格
 //            javax.swing.UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
-//            // 5.Mac风格（需要在相关的操作系统上方可实现）
+//            // 5.Mac风格
 //            javax.swing.UIManager.setLookAndFeel("com.sun.java.swing.plaf.mac.MacLookAndFeel");
-//            // 6.GTK风格（需要在相关的操作系统上方可实现）
+//            // 6.GTK风格
 //            javax.swing.UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
 //            // 7.可跨平台的默认风格
 //            javax.swing.UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
 //            // 8.当前系统的风格
 //            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+
+            // 设置BeantuEye外观下JTabbedPane的左缩进
+//            BeautyEyeLNFHelper.launchBeautyEyeLNF();
+//            UIManager.put("TabbedPane.tabAreaInsets", new javax.swing.plaf.InsetsUIResource(3,20,2,20));
         } catch (Exception e) {
             e.printStackTrace();
         }
