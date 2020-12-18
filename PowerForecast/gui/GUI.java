@@ -625,9 +625,9 @@ public class GUI {
 //            javax.swing.UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
 //            // 4.Motif风格
 //            javax.swing.UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
-//            // 5.Mac风格
+//            // 5.Mac风格（需要在相关的操作系统上方可实现）
 //            javax.swing.UIManager.setLookAndFeel("com.sun.java.swing.plaf.mac.MacLookAndFeel");
-//            // 6.GTK风格
+//            // 6.GTK风格（需要在相关的操作系统上方可实现）
 //            javax.swing.UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
 //            // 7.可跨平台的默认风格
 //            javax.swing.UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
