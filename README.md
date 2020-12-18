@@ -36,7 +36,7 @@ If you found it helpful to you, please give me a star and recommend it to your f
 - CloudSimSEC的中文名称修改为“边缘计算服务器集群能耗和评估模拟平台”
 - 重写了CloudSimSEC的用户界面（原来黑色的那个被吐槽太丑了 XD）
 
-<div align=center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/usage/CloudSimSEC%E9%A6%96%E9%A1%B5.png" width="100%"/></div>
+<div align=center><img src="https://github.com/HayaKus/CloudSimSEC/blob/master/graphs/usage/%E6%96%B0UI.png.png" width="100%"/></div>
 
 ### 2020.11.18 新建分支qosEvaluation
 - 初始页面新增“QoS评估”页面，可以设置基于QoS感知区域评估的相关参数
