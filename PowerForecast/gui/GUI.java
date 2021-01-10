@@ -33,7 +33,7 @@ public class GUI {
     public static JTextArea logTextArea = new JTextArea();
     public static JScrollPane logScroll = new JScrollPane(logTextArea);
 
-    // p1 数据中心
+    // p1 边缘计算中心
     public static String DATACENTER_NAME;
     public static String IT_ENERGYMODEL;
     public static double SCHEDULING_INTERVAL;
@@ -56,7 +56,7 @@ public class GUI {
     public static long VM_BW;
     public static long VM_SIZE;
 
-    // p4 云任务
+    // p4 边缘任务
     public static long[] CLOUDLET_LENGTH;
     public static int[] CLOUDLET_FILESIZE;
     public static int[] CLOUDLET_OUTPUTSIZE;
@@ -129,7 +129,7 @@ public class GUI {
                 frame.getContentPane().add(jl);
                 jl.setText("<html><body>本软件仅支持Matlab导出的模型，方法如下：<br>"
                         +"首先，将正式能耗数据作为训练数据导入Matlab。<br>"
-                        +"格式为：第一列为主机的CPU使用率，第二列为主机的能耗。<br>"
+                        +"格式为：第一列为服务器的CPU使用率，第二列为服务器的能耗。<br>"
                         +"其次，训练模型。<br>"
                         +"在Matlab命令框输入一下指令：<br>"
                         +"x = data(:,1)';<br>"
@@ -227,10 +227,10 @@ public class GUI {
         tp.add(SubJPanelClass.getUserPanel());
         tp.add(SubJPanelClass.getQoSPanel());
 
-        tp.setTitleAt(0, "数据中心");
+        tp.setTitleAt(0, "边缘计算中心");
         tp.setTitleAt(1, "物理服务器");
         tp.setTitleAt(2, "虚拟机");
-        tp.setTitleAt(3, "云任务");
+        tp.setTitleAt(3, "边缘任务");
         tp.setTitleAt(4, "用户");
         tp.setTitleAt(5, "QoS评估");
 

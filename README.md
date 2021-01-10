@@ -35,6 +35,7 @@ If you found it helpful to you, please give me a star and recommend it to your f
 ### 2020.12.18 重写分支qosEvaluation的用户界面
 - 分支“qosEvaluation”的CloudSimSEC的中文名称修改为“边缘计算服务器集群能耗和评估模拟平台”
 - 重写了分支“qosEvaluation”的CloudSimSEC的用户界面（原来黑色的那个被吐槽太丑了（′▽｀））
+- 导入了UI界面的jar包（根目录下的文件“beautyeye_lnf.jar”）
 
 <div align=center><img src="https://github.com/HayaKus/CloudSimSEC/blob/qosEvaluation/graphs/usage/newUI.png" width="100%"/></div>
 
@@ -85,6 +86,7 @@ Note: Do not install this software in the "C://", otherwise there will be a prob
 In addition, there are some environments that must be installed locally, i.e.,  
 **此外，还有以下环境必须被安装：**
 
+- beautyeye_lnf.jar (The file 'beautyeye_lnf.jar' has been placed in the source file.)
 - jdk1.8.0_201 (The file 'jdk1.8.0_201' has been placed in the source file.)
 - MATLAB R2017b (More information can be found on the [MATLAB's web site](https://www.mathworks.com/).)  
 

@@ -28,7 +28,7 @@ public class Evaluation_QoS {
         for(int i = 0; i < Vars.size() / 2; i++) {
             // cpu使用率 例：50 单位：%
             double cpu = row1[i];
-            // 主机负载 例：15 单位：台
+            // 服务器负载 例：15 单位：台
             double hostload = row2[i];
 
             // 最佳cpu值
@@ -37,22 +37,22 @@ public class Evaluation_QoS {
             // 最差cpu值
             double worstCpu = (double)Constant.WORST_CPU / 100;
 
-            // 最佳主机负载值
+            // 最佳服务器负载值
             double bestHostload = Constant.BEST_HOSTLOAD;
 
-            // 最差主机负载值
+            // 最差服务器负载值
             double worstHostload = Constant.WORST_HOSTLOAD;
 
             // cpu权重
             double weightOfCpu = (double)Constant.WEIGHT_CPU / 100;
 
-            // 主机负载权重
+            // 服务器负载权重
             double weightOfHostload = (double)Constant.WEIGHT_HOSTLOAD / 100;
 
             // cpu方向特征值
             int dirOfCpu = (bestCpu > worstCpu ? 1 : -1);
 
-            // 主机负载方向特征值
+            // 服务器负载方向特征值
             int dirOfHostload = (bestHostload > worstHostload ? 1 : -1);
 
             double tempQoS = getQoSByCpuAndHostload(cpu, hostload, bestCpu, worstCpu, bestHostload, worstHostload,
@@ -65,7 +65,7 @@ public class Evaluation_QoS {
     }
 
     /**
-     * 整合该类中方法，根据Cpu和主机负载计算QoS
+     * 整合该类中方法，根据Cpu和服务器负载计算QoS
      * @param cpu
      * @param hostload
      * @param bestCpu

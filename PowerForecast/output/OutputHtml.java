@@ -84,11 +84,15 @@ public class OutputHtml {
 		DecimalFormat df2 = new DecimalFormat("###,###.###");
 
 		// Header
-		String header = "<!doctype html><html><head><meta charset='utf-8'><title>边缘计算服务器集群能耗和评估模拟平台</title><link href='css/bootstrap.min.css' rel='stylesheet'><link href='css/bootstrap.css' rel='stylesheet'><script src='RGraph.common.core.js'></script><script src='RGraph.bar.js'></script><script src='RGraph.line.js'></script><link href='css/styles.css' rel='stylesheet'></head>\t<nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../output/index.html'><img src='images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li class='active'><a href=./index.html>主页</a></li>" + menu + "</ul></div></div></nav></header>";
+		// 去除首页顶端logo
+//		String header = "<!doctype html><html><head><meta charset='utf-8'><title>边缘计算服务器集群能耗和评估模拟平台</title><link href='css/bootstrap.min.css' rel='stylesheet'><link href='css/bootstrap.css' rel='stylesheet'><script src='RGraph.common.core.js'></script><script src='RGraph.bar.js'></script><script src='RGraph.line.js'></script><link href='css/styles.css' rel='stylesheet'></head>\t<nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../output/index.html'><img src='images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li class='active'><a href=./index.html>主页</a></li>" + menu + "</ul></div></div></nav></header>";
+		String header = "<!doctype html><html><head><meta charset='utf-8'><title>边缘计算服务器集群能耗和评估模拟平台</title><link href='css/bootstrap.min.css' rel='stylesheet'><link href='css/bootstrap.css' rel='stylesheet'><script src='RGraph.common.core.js'></script><script src='RGraph.bar.js'></script><script src='RGraph.line.js'></script><link href='css/styles.css' rel='stylesheet'></head>\t<nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../output/index.html'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li class='active'><a href=./index.html>主页</a></li>" + menu + "</ul></div></div></nav></header>";
 		String footer = "</div></body></html>";
 
 		// Building secondary pages
-		String header2 = "<!doctype html><html><head><meta charset='utf-8'><title>边缘计算服务器集群能耗和评估模拟平台</title><link href='../css/bootstrap.min.css' rel='stylesheet'><link href='../css/bootstrap.css' rel='stylesheet'><link href='../css/styles.css' rel='stylesheet'><script src='../RGraph.common.core.js'></script><script src='../RGraph.common.tooltips.js'></script><script src='../RGraph.common.dynamic.js'></script><script src='../RGraph.bar.js'></script><script src='../RGraph.line.js'></script></head><header id='header'><nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../index.html'><img src='../images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li><a href='../index.html'>主页</a></li>" + menu + "</ul></div></div></nav></header>";
+		// 去除首页顶端logo
+//		String header2 = "<!doctype html><html><head><meta charset='utf-8'><title>边缘计算服务器集群能耗和评估模拟平台</title><link href='../css/bootstrap.min.css' rel='stylesheet'><link href='../css/bootstrap.css' rel='stylesheet'><link href='../css/styles.css' rel='stylesheet'><script src='../RGraph.common.core.js'></script><script src='../RGraph.common.tooltips.js'></script><script src='../RGraph.common.dynamic.js'></script><script src='../RGraph.bar.js'></script><script src='../RGraph.line.js'></script></head><header id='header'><nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../index.html'><img src='../images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li><a href='../index.html'>主页</a></li>" + menu + "</ul></div></div></nav></header>";
+		String header2 = "<!doctype html><html><head><meta charset='utf-8'><title>边缘计算服务器集群能耗和评估模拟平台</title><link href='../css/bootstrap.min.css' rel='stylesheet'><link href='../css/bootstrap.css' rel='stylesheet'><link href='../css/styles.css' rel='stylesheet'><script src='../RGraph.common.core.js'></script><script src='../RGraph.common.tooltips.js'></script><script src='../RGraph.common.dynamic.js'></script><script src='../RGraph.bar.js'></script><script src='../RGraph.line.js'></script></head><header id='header'><nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../index.html'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li><a href='../index.html'>主页</a></li>" + menu + "</ul></div></div></nav></header>";
 		String customHeader = header2.replaceAll("./exports/", "./");
 
 		/**
@@ -302,7 +306,7 @@ public class OutputHtml {
 		
 		// Graph (1st page)
 
-		String simParName[]={"总模拟时间(s)", "总物理服务器数量","总虚拟机数量","总云任务数量","数据中心最小能耗(kW·h)","虚拟机的总计算能力(MIPS)"};
+		String simParName[]={"总模拟时间(s)", "总物理服务器数量","总虚拟机数量","总边缘任务数量","边缘计算中心最小能耗(kW·h)","虚拟机的总计算能力(MIPS)"};
 
 		AllEnergy[0]=allPower;
 		inputPower = AllEnergy[0] + "," + AllEnergy[1] + "," + AllEnergy[2] + "," + AllEnergy[3];
@@ -364,9 +368,9 @@ public class OutputHtml {
 		vm += "</div>";
 
 		// Printing Cloudlet Characteristics
-		String cloudlet = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h1 style='margin-top:40px;margin-bottom:30px;'>云任务</h1>";
+		String cloudlet = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h1 style='margin-top:40px;margin-bottom:30px;'>边缘任务</h1>";
 		for ( i = 0; i < Constant.CLOUDLET_LENGTH.length; i++) {
-			cloudlet += "<div class='span4'><table class='table table-bordered'><thead><tr><th>第 " + i + " 种云任务</th></tr></thead><tbody>" + "<tr><td>任务量(MI)</td><td>" + Constant.CLOUDLET_LENGTH[i] + "</td></tr>" + "<tr><td>文件数量</td><td>" + Constant.CLOUDLET_FILESIZE[i] + "</td></tr>" + "<tr><td>输出文件数量</td><td>" + Constant.CLOUDLET_OUTPUTSIZE[i] + "</td></tr>" + "</tbody></table></div>";
+			cloudlet += "<div class='span4'><table class='table table-bordered'><thead><tr><th>第 " + i + " 种边缘任务</th></tr></thead><tbody>" + "<tr><td>任务量(MI)</td><td>" + Constant.CLOUDLET_LENGTH[i] + "</td></tr>" + "<tr><td>文件数量</td><td>" + Constant.CLOUDLET_FILESIZE[i] + "</td></tr>" + "<tr><td>输出文件数量</td><td>" + Constant.CLOUDLET_OUTPUTSIZE[i] + "</td></tr>" + "</tbody></table></div>";
 		}
 		cloudlet += "</div>";
 
@@ -377,7 +381,7 @@ public class OutputHtml {
 		for ( i = 0; i < Constant.USERS_DELAY.length; i++) {
 			for (int k = 0; k < Constant.USR_VMNUM_OWNED[i].length; k++) {
 
-				vmUser += "<tr><td>装载第 " + Constant.USR_CLOUDLET_TYPE[i][k] + " 种云任务的第 " + Constant.USR_TYPE_OWNED[i][k] + " 种虚拟机的数量</td><td>" + Constant.USR_VMNUM_OWNED[i][k] + "</td></tr>";
+				vmUser += "<tr><td>装载第 " + Constant.USR_CLOUDLET_TYPE[i][k] + " 种边缘任务的第 " + Constant.USR_TYPE_OWNED[i][k] + " 种虚拟机的数量</td><td>" + Constant.USR_VMNUM_OWNED[i][k] + "</td></tr>";
 			}
 
 		/*	for (int k = 0; k < Constant.USR_CLOUDLET_TYPE[i].length; k++) {

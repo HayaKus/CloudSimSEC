@@ -116,7 +116,7 @@ public class SubJPanelClass {
 
         p1.setLayout(null);
 
-        JLabel j1 = new JLabel("数据中心名称:");
+        JLabel j1 = new JLabel("边缘计算中心名称:");
         JLabel j2 = new JLabel("IT系统能耗模型:");
         JLabel j3 = new JLabel("模拟间隔(s):");
         JLabel j4 = new JLabel("IT维护系统能耗模型:");
@@ -127,7 +127,7 @@ public class SubJPanelClass {
         JButton openFile = new JButton("浏览文件");
         JButton openFile2 = new JButton("浏览文件");
 
-        j1.setBounds(150, 50, 100, 30);
+        j1.setBounds(125, 50, 120, 30);
         j2.setBounds(140, 100, 120, 30);
         j3.setBounds(160, 350, 100, 30);
         j4.setBounds(115, 150, 130, 30);
@@ -196,7 +196,7 @@ public class SubJPanelClass {
         JPanel p1 = new JPanel();
 
         p1.setLayout(null);
-        // 主机名
+        // 服务器名
         JLabel j1 = new JLabel("第 0 类服务器", JLabel.CENTER);
         JLabel j2 = new JLabel("第 1 类服务器", JLabel.CENTER);
         JLabel j3 = new JLabel("第 2 类服务器", JLabel.CENTER);
@@ -325,7 +325,7 @@ public class SubJPanelClass {
         JPanel p1 = new JPanel();
 
         p1.setLayout(null);
-        // 主机名
+        // 服务器名
         JLabel j1 = new JLabel("虚拟机0", JLabel.CENTER);
         JLabel j2 = new JLabel("虚拟机1", JLabel.CENTER);
         JLabel j3 = new JLabel("虚拟机2", JLabel.CENTER);
@@ -395,11 +395,11 @@ public class SubJPanelClass {
         JPanel p1 = new JPanel();
 
         p1.setLayout(null);
-        // 主机名
-        JLabel j1 = new JLabel("云任务0", JLabel.CENTER);
-        JLabel j2 = new JLabel("云任务1", JLabel.CENTER);
-        JLabel j3 = new JLabel("云任务2", JLabel.CENTER);
-        JLabel j4 = new JLabel("云任务3", JLabel.CENTER);
+        // 服务器名
+        JLabel j1 = new JLabel("边缘任务0", JLabel.CENTER);
+        JLabel j2 = new JLabel("边缘任务1", JLabel.CENTER);
+        JLabel j3 = new JLabel("边缘任务2", JLabel.CENTER);
+        JLabel j4 = new JLabel("边缘任务3", JLabel.CENTER);
 
         j1.setBounds(155, 50, 100, 30);
         j2.setBounds(255, 50, 100, 30);
@@ -409,8 +409,8 @@ public class SubJPanelClass {
         p1.add(j2);
         p1.add(j3);
         p1.add(j4);
-        // 云任务量(MI）
-        JLabel j410 = new JLabel("云任务量(MI):", JLabel.RIGHT);
+        // 边缘任务量(MI）
+        JLabel j410 = new JLabel("边缘任务量(MI):", JLabel.RIGHT);
 
 
         j410.setBounds(40, 90, 110, 30);
@@ -473,7 +473,7 @@ public class SubJPanelClass {
         p1.add(userCount);
         p1.add(userCountText);
 
-        // 主机名
+        // 服务器名
         JLabel j1 = new JLabel("虚拟机0", JLabel.CENTER);
         JLabel j2 = new JLabel("虚拟机1", JLabel.CENTER);
         JLabel j3 = new JLabel("虚拟机2", JLabel.CENTER);
@@ -503,10 +503,10 @@ public class SubJPanelClass {
         p1.add(j513Text);
         p1.add(j514Text);
         // 内存
-        JLabel j520 = new JLabel("云任务种类(名称):", JLabel.RIGHT);
+        JLabel j520 = new JLabel("边缘任务种类(名称):", JLabel.RIGHT);
 
 
-        j520.setBounds(40, 130, 110, 30);
+        j520.setBounds(20, 130, 130, 30);
         j521Text.setBounds(160, 130, 90, 30);
         j522Text.setBounds(260, 130, 90, 30);
         j523Text.setBounds(360, 130, 90, 30);
@@ -565,8 +565,8 @@ public class SubJPanelClass {
         p1.add(jLast13);
 
 
-        // 主机负载
-        JLabel j620 = new JLabel("主机负载:", JLabel.RIGHT);
+        // 服务器负载
+        JLabel j620 = new JLabel("服务器负载:", JLabel.RIGHT);
 
         j620.setBounds(65, 130, 110, 30);
         j621Text.setBounds(190, 130, 100, 30);

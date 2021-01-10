@@ -1,31 +1,14 @@
 package org.cloudbus.cloudsim.examples.power;
 
+import org.cloudbus.cloudsim.*;
+import org.cloudbus.cloudsim.core.CloudSim;
+import org.cloudbus.cloudsim.power.*;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
-
-import org.cloudbus.cloudsim.Cloudlet;
-import org.cloudbus.cloudsim.DatacenterBroker;
-import org.cloudbus.cloudsim.Log;
-import org.cloudbus.cloudsim.Vm;
-import org.cloudbus.cloudsim.VmAllocationPolicy;
-import org.cloudbus.cloudsim.core.CloudSim;
-import org.cloudbus.cloudsim.power.PowerDatacenter;
-import org.cloudbus.cloudsim.power.PowerHost;
-import org.cloudbus.cloudsim.power.PowerVmAllocationPolicyMigrationAbstract;
-import org.cloudbus.cloudsim.power.PowerVmAllocationPolicyMigrationInterQuartileRange;
-import org.cloudbus.cloudsim.power.PowerVmAllocationPolicyMigrationLocalRegression;
-import org.cloudbus.cloudsim.power.PowerVmAllocationPolicyMigrationLocalRegressionRobust;
-import org.cloudbus.cloudsim.power.PowerVmAllocationPolicyMigrationMedianAbsoluteDeviation;
-import org.cloudbus.cloudsim.power.PowerVmAllocationPolicyMigrationStaticThreshold;
-import org.cloudbus.cloudsim.power.PowerVmAllocationPolicySimple;
-import org.cloudbus.cloudsim.power.PowerVmSelectionPolicy;
-import org.cloudbus.cloudsim.power.PowerVmSelectionPolicyMaximumCorrelation;
-import org.cloudbus.cloudsim.power.PowerVmSelectionPolicyMinimumMigrationTime;
-import org.cloudbus.cloudsim.power.PowerVmSelectionPolicyMinimumUtilization;
-import org.cloudbus.cloudsim.power.PowerVmSelectionPolicyRandomSelection;
 
 /**
  * The Class RunnerAbstract.
@@ -42,10 +25,10 @@ import org.cloudbus.cloudsim.power.PowerVmSelectionPolicyRandomSelection;
  */
 
 /**
- * 在更高一层封装了整个实验初始化代码,将power仿真程序中整个逻辑(从init、创建DC到提交云任务并开始仿真、
+ * 在更高一层封装了整个实验初始化代码,将power仿真程序中整个逻辑(从init、创建DC到提交边缘任务并开始仿真、
  * 最后到结束仿真)都封装在了构造函数里,其中构造函数里调用init()方法完成DCBroker、host集合、VM集合
  * 和Cloudlet集合的初始化,然后根据字符串解析出所指定的VmAllocationPolicy对象,再调用start()方法
- * 创建数据中心(用Helper提供的函数)。不过,基本辅助类RunnerAbstract是抽象类,
+ * 创建边缘计算中心(用Helper提供的函数)。不过,基本辅助类RunnerAbstract是抽象类,
  * start()方法是完整可用的(事实上辅助子类直接继承该方法),但init()方法为空,需要继承的子辅助类来实现,
  * 这是因为不同样例需要定义的Cloudlet集合不相同。
  * 

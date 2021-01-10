@@ -29,8 +29,8 @@ import java.util.*;
  */
 
 /**
- * 主要封装了创建Broker、DataCenter、主机、
- * VM方法逻辑(Cloudlet不在此创建),用于创建数据中心的最基本组件和底层逻辑
+ * 主要封装了创建Broker、DataCenter、服务器、
+ * VM方法逻辑(Cloudlet不在此创建),用于创建边缘计算中心的最基本组件和底层逻辑
  * @author Haya
  *
  */

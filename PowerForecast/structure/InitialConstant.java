@@ -112,7 +112,7 @@ public class InitialConstant {
 	public static int WORST_CPU = 100;
 	public static int WEIGHT_CPU = 50;
 
-	// 主机负载 范围 0台 - 50台
+	// 服务器负载 范围 0台 - 50台
 	public static int BEST_HOSTLOAD = 0;
 	public static int WORST_HOSTLOAD = 50;
 	public static int WEIGHT_HOSTLOAD = 50;
