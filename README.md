@@ -33,7 +33,7 @@ If you found it helpful to you, please give me a star and recommend it to your f
 
 ## Update 更新 （建议使用分支“qosEvaluation”中的版本） 
 ### 2020.12.18 重写分支qosEvaluation的用户界面
-- 分支“qosEvaluation”的CloudSimSEC的中文名称修改为“边缘计算服务器集群能耗和评估模拟平台”
+- 分支“qosEvaluation”的CloudSimSEC的中文名称修改为“云边融合的能耗和评估模拟平台”
 - 重写了分支“qosEvaluation”的CloudSimSEC的用户界面（原来黑色的那个被吐槽太丑了（′▽｀））
 - 导入了UI界面的jar包（根目录下的文件“beautyeye_lnf.jar”）
 
