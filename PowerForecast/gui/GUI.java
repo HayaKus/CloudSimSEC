@@ -22,7 +22,7 @@ import java.io.IOException;
 
 public class GUI {
 
-    public static String titlename = "边缘计算服务器集群能耗和评估模拟平台";
+    public static String titlename = "云边融合的能耗和评估模拟平台";
     public static int frameWidth = 1000;
     public static int frameHeight = 600;
     public static int lowerPanelHeight = 70;
@@ -33,7 +33,7 @@ public class GUI {
     public static JTextArea logTextArea = new JTextArea();
     public static JScrollPane logScroll = new JScrollPane(logTextArea);
 
-    // p1 边缘计算中心
+    // p1 云数据中心
     public static String DATACENTER_NAME;
     public static String IT_ENERGYMODEL;
     public static double SCHEDULING_INTERVAL;
@@ -56,7 +56,7 @@ public class GUI {
     public static long VM_BW;
     public static long VM_SIZE;
 
-    // p4 边缘任务
+    // p4 云任务
     public static long[] CLOUDLET_LENGTH;
     public static int[] CLOUDLET_FILESIZE;
     public static int[] CLOUDLET_OUTPUTSIZE;
@@ -227,10 +227,10 @@ public class GUI {
         tp.add(SubJPanelClass.getUserPanel());
         tp.add(SubJPanelClass.getQoSPanel());
 
-        tp.setTitleAt(0, "边缘计算中心");
+        tp.setTitleAt(0, "云数据中心");
         tp.setTitleAt(1, "物理服务器");
         tp.setTitleAt(2, "虚拟机");
-        tp.setTitleAt(3, "边缘任务");
+        tp.setTitleAt(3, "云任务");
         tp.setTitleAt(4, "用户");
         tp.setTitleAt(5, "QoS评估");
 
