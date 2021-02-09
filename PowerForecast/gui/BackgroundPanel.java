@@ -20,7 +20,7 @@ public class BackgroundPanel extends JPanel {
 
     // 固定背景图片，允许这个JPanel可以在图片上添加其他组件
     protected void paintComponent(Graphics g) {
-        g.drawImage(image, 100, 5, 500, 40, this);
+        g.drawImage(image, 100, 5, 550, 50, this);
     }
 
 }

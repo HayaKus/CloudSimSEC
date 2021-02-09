@@ -116,34 +116,34 @@ public class SubJPanelClass {
 
         p1.setLayout(null);
 
-        JLabel j1 = new JLabel("云数据中心名称:");
-        JLabel j2 = new JLabel("IT系统能耗模型:");
-        JLabel j3 = new JLabel("模拟间隔(s):");
-        JLabel j4 = new JLabel("IT维护系统能耗模型:");
-        JLabel j5 = new JLabel("消防系统功耗(W):");
-        JLabel j6 = new JLabel("基础设施系统功耗(W):");
-        JLabel j7 = new JLabel("IT维护系统最大功耗(W):");
+        JLabel j1 = new JLabel("服务器集群名称:");
+        JLabel j2 = new JLabel("服务器集群能耗模型:");
+        JLabel j3 = new JLabel("仿真间隔(s):");
+//        JLabel j4 = new JLabel("IT维护系统能耗模型:");
+//        JLabel j5 = new JLabel("消防系统功耗(W):");
+//        JLabel j6 = new JLabel("基础设施系统功耗(W):");
+//        JLabel j7 = new JLabel("IT维护系统最大功耗(W):");
 
         JButton openFile = new JButton("浏览文件");
         JButton openFile2 = new JButton("浏览文件");
 
         j1.setBounds(140, 50, 120, 30);
-        j2.setBounds(140, 100, 120, 30);
-        j3.setBounds(160, 350, 100, 30);
-        j4.setBounds(115, 150, 130, 30);
-        j5.setBounds(135, 250, 130, 30);
-        j6.setBounds(111, 300, 150, 30);
-        j7.setBounds(100, 200, 150, 30);
+        j2.setBounds(115, 100, 120, 30);
+        j3.setBounds(160, 150, 100, 30);
+//        j4.setBounds(115, 150, 130, 30);
+//        j5.setBounds(135, 250, 130, 30);
+//        j6.setBounds(111, 300, 150, 30);
+//        j7.setBounds(100, 200, 150, 30);
         j1Text.setBounds(240, 50, 280, 30);
         j2Text.setBounds(240, 100, 280, 30);
         openFile.setBounds(525, 100, 70, 30);
-        j3Text.setBounds(240, 350, 280, 30);
+        j3Text.setBounds(240, 150, 280, 30);
         j3Text.setEditable(false);
-        j4Text.setBounds(240, 150, 280, 30);
-        openFile2.setBounds(525, 150, 70, 30);
-        j5Text.setBounds(240, 250, 280, 30);
-        j6Text.setBounds(240, 300, 280, 30);
-        j7Text.setBounds(240, 200, 280, 30);
+//        j4Text.setBounds(240, 150, 280, 30);
+//        openFile2.setBounds(525, 150, 70, 30);
+//        j5Text.setBounds(240, 250, 280, 30);
+//        j6Text.setBounds(240, 300, 280, 30);
+//        j7Text.setBounds(240, 200, 280, 30);
 
         JFileChooser fc = new JFileChooser();
         openFile.addActionListener(new ActionListener() {
@@ -174,17 +174,17 @@ public class SubJPanelClass {
         p1.add(j1);
         p1.add(j2);
         p1.add(j3);
-        p1.add(j4);
-        p1.add(j5);
-        p1.add(j6);
-        p1.add(j7);
+//        p1.add(j4);
+//        p1.add(j5);
+//        p1.add(j6);
+//        p1.add(j7);
         p1.add(j1Text);
         p1.add(j2Text);
         p1.add(j3Text);
-        p1.add(j4Text);
-        p1.add(j5Text);
-        p1.add(j6Text);
-        p1.add(j7Text);
+//        p1.add(j4Text);
+//        p1.add(j5Text);
+//        p1.add(j6Text);
+//        p1.add(j7Text);
         p1.add(openFile);
         p1.add(openFile2);
 
@@ -396,10 +396,10 @@ public class SubJPanelClass {
 
         p1.setLayout(null);
         // 服务器名
-        JLabel j1 = new JLabel("云任务0", JLabel.CENTER);
-        JLabel j2 = new JLabel("云任务1", JLabel.CENTER);
-        JLabel j3 = new JLabel("云任务2", JLabel.CENTER);
-        JLabel j4 = new JLabel("云任务3", JLabel.CENTER);
+        JLabel j1 = new JLabel("任务0", JLabel.CENTER);
+        JLabel j2 = new JLabel("任务1", JLabel.CENTER);
+        JLabel j3 = new JLabel("任务2", JLabel.CENTER);
+        JLabel j4 = new JLabel("任务3", JLabel.CENTER);
 
         j1.setBounds(155, 50, 100, 30);
         j2.setBounds(255, 50, 100, 30);
@@ -409,8 +409,8 @@ public class SubJPanelClass {
         p1.add(j2);
         p1.add(j3);
         p1.add(j4);
-        // 云任务量(MI）
-        JLabel j410 = new JLabel("云任务量(MI):", JLabel.RIGHT);
+        // 任务量(MI）
+        JLabel j410 = new JLabel("任务量(MI):", JLabel.RIGHT);
 
 
         j410.setBounds(40, 90, 110, 30);
@@ -503,7 +503,7 @@ public class SubJPanelClass {
         p1.add(j513Text);
         p1.add(j514Text);
         // 内存
-        JLabel j520 = new JLabel("云任务种类(名称):", JLabel.RIGHT);
+        JLabel j520 = new JLabel("任务种类(名称):", JLabel.RIGHT);
 
 
         j520.setBounds(20, 130, 130, 30);

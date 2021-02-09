@@ -85,14 +85,14 @@ public class OutputHtml {
 
 		// Header
 		// 去除首页顶端logo
-		String header = "<!doctype html><html><head><meta charset='utf-8'><title>云边融合的能耗和评估模拟平台</title><link href='css/bootstrap.min.css' rel='stylesheet'><link href='css/bootstrap.css' rel='stylesheet'><script src='RGraph.common.core.js'></script><script src='RGraph.bar.js'></script><script src='RGraph.line.js'></script><link href='css/styles.css' rel='stylesheet'></head>\t<nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../output/index.html'><img src='images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li class='active'><a href=./index.html>主页</a></li>" + menu + "</ul></div></div></nav></header>";
-//		String header = "<!doctype html><html><head><meta charset='utf-8'><title>云边融合的能耗和评估模拟平台</title><link href='css/bootstrap.min.css' rel='stylesheet'><link href='css/bootstrap.css' rel='stylesheet'><script src='RGraph.common.core.js'></script><script src='RGraph.bar.js'></script><script src='RGraph.line.js'></script><link href='css/styles.css' rel='stylesheet'></head>\t<nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../output/index.html'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li class='active'><a href=./index.html>主页</a></li>" + menu + "</ul></div></div></nav></header>";
+		String header = "<!doctype html><html><head><meta charset='utf-8'><title>服务评价与能耗预测仿真平台</title><link href='css/bootstrap.min.css' rel='stylesheet'><link href='css/bootstrap.css' rel='stylesheet'><script src='RGraph.common.core.js'></script><script src='RGraph.bar.js'></script><script src='RGraph.line.js'></script><link href='css/styles.css' rel='stylesheet'></head>\t<nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../output/index.html'><img src='images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li class='active'><a href=./index.html>主页</a></li>" + menu + "</ul></div></div></nav></header>";
+//		String header = "<!doctype html><html><head><meta charset='utf-8'><title>服务评价与能耗预测仿真平台</title><link href='css/bootstrap.min.css' rel='stylesheet'><link href='css/bootstrap.css' rel='stylesheet'><script src='RGraph.common.core.js'></script><script src='RGraph.bar.js'></script><script src='RGraph.line.js'></script><link href='css/styles.css' rel='stylesheet'></head>\t<nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../output/index.html'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li class='active'><a href=./index.html>主页</a></li>" + menu + "</ul></div></div></nav></header>";
 		String footer = "</div></body></html>";
 
 		// Building secondary pages
 		// 去除首页顶端logo
-		String header2 = "<!doctype html><html><head><meta charset='utf-8'><title>云边融合的能耗和评估模拟平台</title><link href='../css/bootstrap.min.css' rel='stylesheet'><link href='../css/bootstrap.css' rel='stylesheet'><link href='../css/styles.css' rel='stylesheet'><script src='../RGraph.common.core.js'></script><script src='../RGraph.common.tooltips.js'></script><script src='../RGraph.common.dynamic.js'></script><script src='../RGraph.bar.js'></script><script src='../RGraph.line.js'></script></head><header id='header'><nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../index.html'><img src='../images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li><a href='../index.html'>主页</a></li>" + menu + "</ul></div></div></nav></header>";
-//		String header2 = "<!doctype html><html><head><meta charset='utf-8'><title>云边融合的能耗和评估模拟平台</title><link href='../css/bootstrap.min.css' rel='stylesheet'><link href='../css/bootstrap.css' rel='stylesheet'><link href='../css/styles.css' rel='stylesheet'><script src='../RGraph.common.core.js'></script><script src='../RGraph.common.tooltips.js'></script><script src='../RGraph.common.dynamic.js'></script><script src='../RGraph.bar.js'></script><script src='../RGraph.line.js'></script></head><header id='header'><nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../index.html'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li><a href='../index.html'>主页</a></li>" + menu + "</ul></div></div></nav></header>";
+		String header2 = "<!doctype html><html><head><meta charset='utf-8'><title>服务评价与能耗预测仿真平台</title><link href='../css/bootstrap.min.css' rel='stylesheet'><link href='../css/bootstrap.css' rel='stylesheet'><link href='../css/styles.css' rel='stylesheet'><script src='../RGraph.common.core.js'></script><script src='../RGraph.common.tooltips.js'></script><script src='../RGraph.common.dynamic.js'></script><script src='../RGraph.bar.js'></script><script src='../RGraph.line.js'></script></head><header id='header'><nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../index.html'><img src='../images/logo.png' alt='logo'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li><a href='../index.html'>主页</a></li>" + menu + "</ul></div></div></nav></header>";
+//		String header2 = "<!doctype html><html><head><meta charset='utf-8'><title>服务评价与能耗预测仿真平台</title><link href='../css/bootstrap.min.css' rel='stylesheet'><link href='../css/bootstrap.css' rel='stylesheet'><link href='../css/styles.css' rel='stylesheet'><script src='../RGraph.common.core.js'></script><script src='../RGraph.common.tooltips.js'></script><script src='../RGraph.common.dynamic.js'></script><script src='../RGraph.bar.js'></script><script src='../RGraph.line.js'></script></head><header id='header'><nav id='main-nav' class='navbar navbar-default navbar-fixed-top' role='banner'><div class='container'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a class='navbar-brand' href='../index.html'></a></div><div class='collapse navbar-collapse navbar-right'><ul class='nav navbar-nav'><li><a href='../index.html'>主页</a></li>" + menu + "</ul></div></div></nav></header>";
 		String customHeader = header2.replaceAll("./exports/", "./");
 
 		/**
@@ -262,9 +262,9 @@ public class OutputHtml {
 									.getName() + ".html'>" + monitor.getName() + "</a></li>");
 
 			monitorGraphs = "<script> window.onload = function (){" + makeLine(monitor) + hostCanvas[1] + "}</script>";
-			graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:150px;margin-bottom:30px;'>所有物理服务器的平均功率(W)</h2><div class='span12'><h3 style='margin-top:10px;'>平均功率/W</h3><canvas id='powerGraph" + monitor
+			graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:150px;margin-bottom:30px;'>服务器集群的平均功率记录</h2><div class='span12'><h3 style='margin-top:10px;'>平均功率/W</h3><canvas id='powerGraph" + monitor
 					.getName() + "' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3><script></script></div></div>";
-			graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:40px;margin-bottom:30px;'>所有物理服务器的平均评估值</h2><div class='span12'><h3 style='margin-top:10px;'>平均评估值</h3><canvas id='utilGraph" + monitor
+			graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:40px;margin-bottom:30px;'>服务器集群的平均评估值记录</h2><div class='span12'><h3 style='margin-top:10px;'>平均评估值</h3><canvas id='utilGraph" + monitor
 					.getName() + "' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3><script></script></div></div>";
 			graphMonitor += hostCanvas[0];
 
@@ -306,7 +306,7 @@ public class OutputHtml {
 		
 		// Graph (1st page)
 
-		String simParName[]={"总模拟时间(s)", "总物理服务器数量","总虚拟机数量","总云任务数量","云数据中心最小能耗(kW·h)","虚拟机的总计算能力(MIPS)"};
+		String simParName[]={"总模拟时间(s)", "总物理服务器数量","总虚拟机数量","总任务数量","服务器集群最小能耗(kW·h)","虚拟机的总计算能力(MIPS)"};
 
 		AllEnergy[0]=allPower;
 		inputPower = AllEnergy[0] + "," + AllEnergy[1] + "," + AllEnergy[2] + "," + AllEnergy[3];
@@ -321,8 +321,8 @@ public class OutputHtml {
 			simParTr += "<tr><td>" + simParName[i] + "</td><td>" + simParAttr[i] + "</td></tr>";
 		}
 
-		String graphs = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h1 style='margin-top:150px;margin-bottom:30px;'>" + "总能耗对比</h1><div class='span12'><h3 style='margin-top:10px;'>能耗/kW·h</h3><script> window.onload = function (){" + "var data = [" + inputPower + "];var bar = new RGraph.Bar('myCanvas', data);bar.Set('chart.labels', [" + inputNames + "]);bar.Set('chart.gutter.left', 35); bar.Draw();}</script>" + "<canvas id='myCanvas' width='1000' height='450'>[No canvas support]</canvas><h3 style=\"text-align:center;\">调度算法名称</h3></div></div>" +
-				"<div class='row' style='margin-left:30px;'>" + "<div class='span16'><table class='table table-bordered'><thead><tr><th>调度算法名称</th><th>IT系统能耗(kW·h)</th><th>总能耗(kW·h)</th><th>总处理进程数</th><th>平均SLA</th><th>迁移数</th></thead><tbody>" + inputNamesTr + "</tbody></table></div><div class='span4'><table class='table table-bordered'><thead><tr><th>模拟情况</th></thead><tbody>" + simParTr + "</tbody></table></div></div>";
+		String graphs = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h1 style='margin-top:150px;margin-bottom:30px;'>" + "能耗仿真</h1><div class='span12'><h3 style='margin-top:10px;'>能耗/kW·h</h3><script> window.onload = function (){" + "var data = [" + inputPower + "];var bar = new RGraph.Bar('myCanvas', data);bar.Set('chart.labels', [" + inputNames + "]);bar.Set('chart.gutter.left', 35); bar.Draw();}</script>" + "<canvas id='myCanvas' width='1000' height='450'>[No canvas support]</canvas><h3 style=\"text-align:center;\">调度算法名称</h3></div></div>" +
+				"<div class='row' style='margin-left:30px;'>" + "<div class='span16'><table class='table table-bordered'><thead><tr><th>调度算法名称</th><th>系统能耗(kW·h)</th><th>总能耗(kW·h)</th><th>总处理进程数</th><th>平均SLA</th><th>迁移数</th></thead><tbody>" + inputNamesTr + "</tbody></table></div><div class='span4'><table class='table table-bordered'><thead><tr><th>模拟情况</th></thead><tbody>" + simParTr + "</tbody></table></div></div>";
 
 		// Combined view
 		String[] hostCompinedCanvas = makeHostCombinedLine(monitors);
@@ -331,8 +331,8 @@ public class OutputHtml {
 				"<li><a href='../exports/combined.html'>混合对比</a></li>",
 				"<li class='active'><a href='#'>混合对比</a></li>");
 		monitorGraphs = "<script> window.onload = function (){" + hostCompinedCanvas[1] + "}</script>";
-		graphMonitor = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:150px;margin-bottom:30px;'>所有物理服务器的平均功率(W)</h2><div class='span12'><h3 style='margin-top:10px;'>平均功率/W</h3><canvas id='powerGraph' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3></div></div>";
-		graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:40px;margin-bottom:30px;'>所有物理服务器的平均评估值</h2><div class='span12'><h3 style='margin-top:10px;'>平均评估值</h3><canvas id='utilGraph' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3></div></div>";
+		graphMonitor = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:150px;margin-bottom:30px;'>服务器集群的平均功率记录</h2><div class='span12'><h3 style='margin-top:10px;'>平均功率/W</h3><canvas id='powerGraph' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3></div></div>";
+		graphMonitor += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h2 style='margin-top:40px;margin-bottom:30px;'>服务器集群的平均评估值记录</h2><div class='span12'><h3 style='margin-top:10px;'>平均评估值</h3><canvas id='utilGraph' width='1024' height='250'>[No canvas support]</canvas><h3 style='text-align:center;'>时间戳</h3></div></div>";
 		graphMonitor += hostCompinedCanvas[0];
 		try {
 
@@ -368,9 +368,9 @@ public class OutputHtml {
 		vm += "</div>";
 
 		// Printing Cloudlet Characteristics
-		String cloudlet = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h1 style='margin-top:40px;margin-bottom:30px;'>云任务</h1>";
+		String cloudlet = "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><h1 style='margin-top:40px;margin-bottom:30px;'>任务</h1>";
 		for ( i = 0; i < Constant.CLOUDLET_LENGTH.length; i++) {
-			cloudlet += "<div class='span4'><table class='table table-bordered'><thead><tr><th>第 " + i + " 种云任务</th></tr></thead><tbody>" + "<tr><td>任务量(MI)</td><td>" + Constant.CLOUDLET_LENGTH[i] + "</td></tr>" + "<tr><td>文件数量</td><td>" + Constant.CLOUDLET_FILESIZE[i] + "</td></tr>" + "<tr><td>输出文件数量</td><td>" + Constant.CLOUDLET_OUTPUTSIZE[i] + "</td></tr>" + "</tbody></table></div>";
+			cloudlet += "<div class='span4'><table class='table table-bordered'><thead><tr><th>第 " + i + " 种任务</th></tr></thead><tbody>" + "<tr><td>任务量(MI)</td><td>" + Constant.CLOUDLET_LENGTH[i] + "</td></tr>" + "<tr><td>文件数量</td><td>" + Constant.CLOUDLET_FILESIZE[i] + "</td></tr>" + "<tr><td>输出文件数量</td><td>" + Constant.CLOUDLET_OUTPUTSIZE[i] + "</td></tr>" + "</tbody></table></div>";
 		}
 		cloudlet += "</div>";
 
@@ -381,7 +381,7 @@ public class OutputHtml {
 		for ( i = 0; i < Constant.USERS_DELAY.length; i++) {
 			for (int k = 0; k < Constant.USR_VMNUM_OWNED[i].length; k++) {
 
-				vmUser += "<tr><td>装载第 " + Constant.USR_CLOUDLET_TYPE[i][k] + " 种云任务的第 " + Constant.USR_TYPE_OWNED[i][k] + " 种虚拟机的数量</td><td>" + Constant.USR_VMNUM_OWNED[i][k] + "</td></tr>";
+				vmUser += "<tr><td>装载第 " + Constant.USR_CLOUDLET_TYPE[i][k] + " 种任务的第 " + Constant.USR_TYPE_OWNED[i][k] + " 种虚拟机的数量</td><td>" + Constant.USR_VMNUM_OWNED[i][k] + "</td></tr>";
 			}
 
 		/*	for (int k = 0; k < Constant.USR_CLOUDLET_TYPE[i].length; k++) {
@@ -658,8 +658,8 @@ public class OutputHtml {
 			PowerHostPlus big = (PowerHostPlus) h;
 			int nameVar = big.getId();
 
-			graphMonitor[0] += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + nameVar + " 的评估值</h3><h4 style='margin-top:10px;'>评估值</h4><canvas id='util" + nameVar + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div>";
-			graphMonitor[0] += "<div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + nameVar + " 的功率(W)</h3><h4 style='margin-top:10px;'>功率/W</h4><canvas id='power" + nameVar + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div></div>";
+			graphMonitor[0] += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + nameVar + " 的评估值记录</h3><h4 style='margin-top:10px;'>评估值</h4><canvas id='util" + nameVar + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div>";
+			graphMonitor[0] += "<div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + nameVar + " 的功率记录(W)</h3><h4 style='margin-top:10px;'>功率/W</h4><canvas id='power" + nameVar + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div></div>";
 
 			boolean firstTime = true;
 			String averUtil = "";
@@ -979,8 +979,8 @@ public class OutputHtml {
 				int hostId = (int) big[0];
 				String nameVar = hostId + monitor.getName();
 				if (firstMonitor) {
-					graphMonitor[0] += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><div class='span6' style='margin-right:4%;'><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + hostId + " 的评估值</h3><h4 style='margin-top:10px;'>评估值</h4><canvas id='util" + hostId + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div>";
-					graphMonitor[0] += "<div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + hostId + " 的功率(W)</h3><h4 style='margin-top:10px;'>功率/W</h4><canvas id='power" + hostId + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div></div>";
+					graphMonitor[0] += "<div class='row' style='border-top: 1px solid #eeeeee;margin-bottom:50px;margin-left:30px;'><div class='span6' style='margin-right:4%;'><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + hostId + " 的评估值记录</h3><h4 style='margin-top:10px;'>评估值</h4><canvas id='util" + hostId + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div>";
+					graphMonitor[0] += "<div class='span6' style=''><h3 style='margin-top:40px;margin-bottom:30px;'>服务器 " + hostId + " 的功率记录(W)</h3><h4 style='margin-top:10px;'>功率/W</h4><canvas id='power" + hostId + "' width='450' height='250'>[No canvas support]</canvas><h4 style='text-align:center;'>时间戳</h4><script></script></div></div>";
 				}
 				boolean firstTime = true;
 				String averUtil = "";
