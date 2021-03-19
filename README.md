@@ -221,6 +221,8 @@ A web version of CloudSimSEC will be launched soon.
 
 **Website: [twocups.cn](https://twocups.cn)**  
 
+**Gmail：haya.haowei.lin@gmail.com**
+
 **E-Mail: 296329404@qq.com**  
 
 
